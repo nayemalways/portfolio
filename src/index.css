@@ -15,6 +15,11 @@ background: linear-gradient(to right, #395EFF 0%, #5FBCFF 100%);
   box-sizing: border-box;
 }
 
+ul, li {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: "Space Grotesk", serif;
   background: #000;
