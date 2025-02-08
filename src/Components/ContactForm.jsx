@@ -7,24 +7,21 @@ const ContactForm = () => {
                 <div style={{height: '100vh'}} className="container">
                     <div className="row d-flex justify-content-center align-items-center">
                         <div className="col-md-12 text-center">
-                            <h1 className='h1_color fw-bold'>Get in touch</h1>
+                            <h2 className='h1_color fw-bold'>Get in touch</h2>
                         </div>
                         <div className="col-md-6 text-start">
-                            <form className='' action="">
-                                <div className='pt-2'>
-                                    <label className='form-label' htmlFor="name">Name:</label>
-                                    <input className='form-control' id='name' name='name' type="text" placeholder='Enter your name'/>
+                            <form id='form' action="">
+                                <div className='pt-3'>
+                                    <input className='form-control text-white' id='name' name='name' type="text" placeholder='Name..'/>
                                 </div>                            
-                                <div className='pt-2'>
-                                    <label className='form-label' htmlFor="email">Email:</label>
-                                    <input className='form-control' id='email' name='email' type="email" placeholder='Enter your email'/>
+                                <div className='pt-3'>
+                                    <input className='form-control' id='email' name='email' type="email" placeholder='example@gmail.com'/>
                                 </div>
 
-                                <div className='py-2'>
-                                    <label className='form-label' htmlFor="message">Message:</label>
-                                    <textarea rows={6} className='form-control' name="message" id="message" placeholder='Enter your message here'></textarea>
+                                <div className='py-3'>
+                                    <textarea rows={6} className='form-control' name="message" id="message" placeholder='your message..'></textarea>
                                 </div>
-                                <button type='submit' className='btn btn-primary w-100'>Send</button>
+                                <button type='submit' className='btn btn-primary w-100'>Send Message</button>
                             </form>
                         </div>
                     </div>
