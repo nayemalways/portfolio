@@ -9,7 +9,6 @@ const Navbar = () => {
         setshowMenu(!showMenu);
     }
 
-    console.log(showMenu);
 
     return (
         <>

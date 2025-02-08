@@ -28,13 +28,20 @@ body {
   padding: 0;
 }
 
-.t_color {
-  background: linear-gradient(90deg,rgb(42, 129, 255), rgb(255, 255, 255));
+.h1_color {
+  background: linear-gradient(90deg,rgb(42, 129, 255), rgb(134, 221, 250));
   background-clip: text ;
   -webkit-text-fill-color: transparent;
 }
 
-
-/* footer {
-  height: 50px;
+/* .h1_color {
+  background: linear-gradient(90deg,rgb(42, 129, 255), rgb(255, 255, 255));
+  background-clip: text ;
+  -webkit-text-fill-color: transparent;
 } */
+
+
+footer {
+  border-top: 1px solid #dddddd35;
+}
+

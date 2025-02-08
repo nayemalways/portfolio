@@ -7,6 +7,8 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css'
 import '../src/assets/Css/Nabbar.custom.css'
+import '../src/assets/Css/Hero.custom.css'
+import '../src/assets/Css/Blog.custom.css'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

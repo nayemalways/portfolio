@@ -43,10 +43,10 @@
     position: absolute;
     top: 4.5rem;
     right: 0;
-    width: 100vw;
+    width: 100%;
    
     div {
-        background-color: #95cdfe3b;
+        background-color: #435576;
         width: 100%;
         height: 60vh;     
     }
@@ -72,6 +72,12 @@
             flex-direction: column;
             gap: 1.5rem;
             justify-content: center;
+            margin-left: -28px;
+           li {
+             a {
+                color: #ddd !important;
+             }
+           }
         }
     
    }

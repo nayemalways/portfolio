@@ -1,0 +1,17 @@
+
+
+@media screen and (max-width: 768px) {
+    .w-250px {
+        max-width: 250px;
+    }
+
+    .container {
+        .row {
+            div {
+                div {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

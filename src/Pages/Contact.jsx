@@ -1,10 +1,11 @@
 import React from 'react';
 import Layout from '../Layout/Layout';
+import ContactForm from '../Components/ContactForm';
 
 const Contact = () => {
     return (
         <Layout>
-            <h1>This is Contact page</h1>
+             <ContactForm/>
         </Layout>
     );
 };
