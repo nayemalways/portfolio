@@ -1,5 +1,22 @@
 
 
+
+#Hero__section {
+    background-image: url('../image/hero-bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    
+}
+
+._shadow {
+    border-radius: 50%; /* Ensures the shape is a circle */
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.7);
+}
+
+
+
 @media screen and (max-width: 768px) {
     .w-250px {
         max-width: 250px;
