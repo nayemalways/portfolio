@@ -1,10 +1,16 @@
 import React from 'react';
 import Layout from '../Layout/Layout';
+import BlogSection from '../Components/BlogSection';
+ 
 
 const Blog = () => {
+    const blogData = {
+        title: "Read all our blogs",
+        display_none: "none",  // This is for 'View all" link hiding in blogSection components
+    }
     return (
         <Layout>
-            <h1>This is Blog page</h1>
+            <BlogSection {...blogData}/>
         </Layout>
     );
 };

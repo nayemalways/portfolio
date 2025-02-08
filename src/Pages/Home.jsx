@@ -5,10 +5,16 @@ import BlogSection from '../Components/BlogSection';
 
 
 const Home = () => {
+
+    const blogData = {
+        title: "Latest blog",
+        subtitle: "Be updated with latest technology in the world."
+    }
+
     return (
         <Layout>
             <HeroSection/>
-            <BlogSection/>
+            <BlogSection {...blogData}/>
         </Layout>
     );
 };
