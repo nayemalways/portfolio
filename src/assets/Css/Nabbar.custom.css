@@ -1,7 +1,16 @@
 
 .navigation{
     height: 70px;
+    width: 100%;
     box-shadow: 1px 0px  1px #fff;
+    position: sticky;
+    top: 0;
+
+    background: rgba(255, 255, 255, 0.031); /* Light transparent background */
+    backdrop-filter: blur(10px); /* Adds blur effect */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    transition: background 0.3s ease-in-out;
+    z-index: 999;
 }
 
 .nav__link{

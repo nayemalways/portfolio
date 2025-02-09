@@ -1,9 +1,48 @@
 
 
-@media screen and (max-width: 768px) {
-    .w-250px {
-        max-width: 250px;
+
+#Hero__section {
+    background-image: url('../image/hero-bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    
+}
+
+._shadow {
+    border-radius: 50%;
+    box-shadow: 0 0 30px #20bac8;
+    /* box-shadow: 0 0 30px rgba(255, 255, 255, 0.7); */
+}
+
+
+/* This styles for Hero image */
+.bg-color {
+    background-color: #363538de;
+}
+
+.animate {
+    animation: animate 2s linear infinite alternate forwards;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(0);
     }
+    50% {
+        transform: translateY(-20px); /* Move up */
+    }
+    100% {
+        transform: translateY(0); /* Move back down */
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 768px) {
 
     .container {
         .row {

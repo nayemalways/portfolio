@@ -1,0 +1,20 @@
+#form input::placeholder,
+#form textarea::placeholder {
+    color: #ebe3e373;  
+}
+
+
+#form input ,
+#form textarea {
+    background: #000; 
+    border-color:  #ebe3e373 !important;
+    outline: none !important;
+}
+
+
+
+#form input:focus ,
+#form textarea:focus {
+ 
+     border: none;
+}
