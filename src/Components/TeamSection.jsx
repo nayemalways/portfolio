@@ -15,7 +15,7 @@ const TeamSection = () => {
                             <h1 className='h1_color text-center mb-0 fw-bold'>Meet Our Team</h1>
                         </div>
                     </div>
-                    <div className="col-md-12 d-flex gap-4 pt-5">
+                    <div className="col-md-12 d-flex gap-4 flex-wrap justify-content-center pt-5">
                         
                         <div className="team-card ratio ratio-1x1 bg-warning rounded rounded-sm">
                             <img className='w-100 object-fit-cover rounded rounded-sm' src={teamImage} alt="Nayem"/>
