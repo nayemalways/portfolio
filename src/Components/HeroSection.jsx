@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { TypeAnimation } from 'react-type-animation';
 
-
 import image from '../assets/image/nayem_.png'
 
 
@@ -20,13 +19,14 @@ const HeroSection = () => {
                                    
                                    {/* Added text animation  */}
                                 <TypeAnimation
-                                        sequence={[
-                                            'Nayem Ahmed', // Types 'One'
-                                            2000, // Waits 1s
-                                            'A Full Stack Javascript Developer', // Deletes 'One' and types 'Two'
-                                            2000, // Waits 2s
-                                        ]}
-                                        wrapper="span"
+                                         sequence={[
+                                             'Nayem Ahmed', // Types 'One'
+                                             2000, // Waits 1s
+                                             'A Full Stack Javascript Developer', // Deletes 'One' and types 'Two'
+                                             2000, // Waits 2s
+                                            ]}
+                                            speed={40}
+                                            wrapper="span"
                                         cursor={true}
                                         repeat={Infinity}
                                         style={{ fontSize: '1.2em', display: 'inline-block' }}
