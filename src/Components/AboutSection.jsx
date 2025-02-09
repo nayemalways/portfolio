@@ -4,11 +4,11 @@ import image from '../assets/image/me.png'
 const AboutSection = () => {
     return (
         <>
-          <section>
+          <section className='pb-5'>
             <div style={{height: "90vh"}} className="container  ">
                 <div className="row h-100 d-flex justify-content-center align-items-center">
                     <div className="col-md-12">
-                        <h1 className='h1_color text-center mb-0'>About Me</h1>
+                        <h1 className='h1_color fw-bold text-center mb-0'>About Me</h1>
                     </div>
                     <div  className="col-sm-6 col-md-6  ">
                         <p className='text-secondary  lh-lg mb-0'>
