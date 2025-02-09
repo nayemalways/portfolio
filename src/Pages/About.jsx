@@ -1,10 +1,11 @@
 import React from 'react';
 import Layout from '../Layout/Layout';
+import AboutSection from '../Components/AboutSection';
 
 const About = () => {
     return (
         <Layout>
-            <h1>This is About page</h1>
+             <AboutSection />
         </Layout>
     );
 };

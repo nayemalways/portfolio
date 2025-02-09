@@ -3,7 +3,7 @@
     height: 70px;
     width: 100%;
     box-shadow: 1px 0px  1px #fff;
-    position: fixed;
+    position: sticky;
     top: 0;
 
     background: rgba(255, 255, 255, 0.031); /* Light transparent background */
