@@ -18,7 +18,7 @@ const AboutSection = () => {
                         </p>
                     </div>
                     <div className="col-sm-6 col-md-6 text-center  ">
-                        <img  className='img-fluid rounded rounded-sm shadow shadow-3 glow max-width' src={image} alt="Photo" />
+                        <img style={{maxWidth: '230px'}}  className='img-fluid rounded rounded-sm shadow shadow-3 max-width' src={image} alt="Photo" />
                     </div>
                 </div>
             </div>
