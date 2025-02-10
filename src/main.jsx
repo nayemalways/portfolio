@@ -12,6 +12,7 @@ import '../src/assets/Css/Blog.custom.css'
 import '../src/assets/Css/Contact.custom.css'
 import '../src/assets/Css/About.custom.css'
 import '../src/assets/Css/Services.custom.css'
+import '../src/assets/Css/Responsive.custom.css'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

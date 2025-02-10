@@ -9,7 +9,7 @@ import Card from './Card';
 const BlogSection = ({title, subtitle, display_none}) => {
     return (
         <>
-           <section className='py-5'>
+           <section className='blog-section py-5'>
                 <div className="container">
                     <div className="row">
                         <div className="col-md-12 d-flex justify-content-center align-items-center text-center">
