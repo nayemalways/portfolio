@@ -15,7 +15,7 @@ const HeroSection = () => {
                         <div className="col-md-6 col-lg-6 col-12 py-5">
                             <div>
                                 <h4 className='text-secondary'>Hi, I'm</h4>
-                                <h1 className='h1_color fw-bold '>     
+                                <h1 className='h1_color text-size fw-bold '>     
                                    {/* Added text animation  */}
                                     <TypeAnimation
                                             sequence={[

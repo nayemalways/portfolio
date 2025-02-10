@@ -15,6 +15,10 @@
     box-shadow: 0 0 30px #20bac8;
 }
 
+.text-size {
+    font-size: clamp();
+}
+
 
 /* This styles for Hero image */
 .bg-color {
