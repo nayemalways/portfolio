@@ -1,3 +1,4 @@
+ /* --------------About Section Start------------------- */
  .about-section  {
     font-size: clamp(12px, 4vw, 16px);
     text-align: justify;
@@ -20,15 +21,11 @@
         
     }
  }
-  /* --------------About Section End------------------- */
+/* --------------About Section End------------------- */
  
  
 
- /* --------------Team Section------------------- */
-
-
- 
- 
+ /* --------------Team Section Start------------------- */
  .team-card {
     max-width: 14rem;
     min-width: 14rem;
@@ -113,4 +110,5 @@
         margin-bottom: 70rem;
     }
 }
- 
+
+/* --------------Team Section End------------------- */
