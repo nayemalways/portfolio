@@ -7,8 +7,8 @@ import teamImage from '../assets/image/me.png'
 const TeamSection = () => {
     return (
         <>
-          <section className='py-5'>
-            <div className="container vh-100">
+          <section className='team-section '>
+            <div className="container vh-100 pt-5">
                 <div className="row">
                     <div className="col-md-12 text-center">
                         <div>

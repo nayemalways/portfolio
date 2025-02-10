@@ -1,5 +1,36 @@
+ .about-section  {
+    font-size: clamp(12px, 4vw, 16px);
+    text-align: justify;
+ }
+
+
+
+ 
+ @media screen and (max-width: 768px) {
+    .about-section {
+        div div div {
+            padding-top: 2rem;
+        }
+    }
+ }
+ 
+ @media screen and (min-width: 992px) {
+    .text-line-height {
+        line-height: 2rem;
+        
+    }
+ }
+  /* --------------About Section End------------------- */
+ 
+ 
+
+ /* --------------Team Section------------------- */
+
+
+ 
+ 
  .team-card {
-    max-width: 16rem;
+    max-width: 14rem;
     min-width: 14rem;
     height: 21rem;
     cursor: pointer;
@@ -51,4 +82,35 @@
 } 
 
 
+ 
+
+
+ /* This responsive code only for About page footer. I added Team Sectin padding for down the footer */
+ @media screen and (max-width: 1199px) {
+    .team-section {
+        margin-bottom: 22rem;
+     }
+     
+ }
+ 
+ @media screen and (max-width: 992px) {
+    .team-section {
+        margin-bottom: 25rem;
+     }
+     
+ }
+ 
+ @media screen and (max-width: 768px) {
+    .team-section {
+        margin-bottom: 25rem;
+     }
+     
+ }
+
+
+@media screen and (max-width: 495px) {
+    .team-section {
+        margin-bottom: 70rem;
+    }
+}
  
