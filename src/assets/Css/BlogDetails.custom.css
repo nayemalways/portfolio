@@ -1,0 +1,29 @@
+
+/* Utility class  */
+.blogTitleSize-clamp {
+    font-size: clamp(18px, 4vw, 30px);
+}
+
+.blog-text-clamp {
+    font-size: clamp(13px, 2vw, 16px);
+}
+
+
+
+/* Main Styling  */
+.blog-card {
+    .blog-body {
+        span {
+            font-size: 13px;
+        }
+        p {
+            text-align: justify;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .blog-card {
+        min-width: 90%;
+    }
+}
