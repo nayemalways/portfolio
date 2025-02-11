@@ -33,6 +33,18 @@ export const readBlogService = async () => {
 // Update Blog
 export const updateBlogService = async (req) => {
     try {
+        const blogId = req.params['blogId'];
+        const reqBody = req.body;
+
+        // Update blog DB operation
+        const data = await BlogModel.updateOne({_id: blogId} ,reqBody);
+        // Check if not updated
+        if(data.modifiedCount === 0) {
+            return {status: "fail",  message: "Update failed"}
+        }
+
+        // Finnaly return data
+        return {status: "succes",  message: "Blog updated success!"}
 
     }catch(e) {
         console.log(e.toString());
