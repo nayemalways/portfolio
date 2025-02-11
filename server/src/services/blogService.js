@@ -1,10 +1,15 @@
 
+import BlogModel from './../models/blogModel.js';
 
 
 
 // Create Blog
 export const createBlogService = async (req) => {
     try {
+        const reqBody = req.body;
+        await BlogModel.create(reqBody);
+
+        return {status: "success", message: "Blog posted success!"}
 
     }catch(e) {
         console.log(e.toString());
@@ -19,7 +24,7 @@ export const readBlogService = async (req) => {
 
     }catch(e) {
         console.log(e.toString());
-        return {status: "error", message: "Internal server error"}
+        return {status: "error",  message: "Internal server error"}
     }
 }
 
