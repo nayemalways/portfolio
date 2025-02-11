@@ -10,7 +10,7 @@ export const PASSWORD = process.env.PASSWORD;
 export const PORT = process.env.PORT;
 
 export const JWT_SECRET = process.env.JWT_TOKEN ;
-export const JWT_EXPIRATION = process.env.JWT_EXPIRATION;
+export const JWT_EXPIRATION = parseFloat(process.env.JWT_EXPIRATION);
 
 export const URL_ENCODE = process.env.URL_ENCODE;
 
