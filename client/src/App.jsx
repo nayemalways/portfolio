@@ -7,6 +7,7 @@ import Blog from './Pages/Blog';
 import Service from './Pages/Service';
 import Contact from './Pages/Contact';
 import BlogDetails from './Pages/BlogDetails';
+import Dashboard from './Pages/Dashboard';
  
  const App = () => {
   return (
@@ -19,6 +20,7 @@ import BlogDetails from './Pages/BlogDetails';
           <Route path="/service" element={<Service />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/blog-details" element={<BlogDetails />} />
+          <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
       </BrowserRouter>
     </>
