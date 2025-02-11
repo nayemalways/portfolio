@@ -56,7 +56,17 @@ export const updateMemberService = async (req) => {
 // Delete single member
 export const deleteMemberService = async (req) => {
     try {
+        // Get member id from url parmas
+        const memberId = req.params['memberId'];
+        // Delee single Team member by memeer id
+        const data = await TeamsModel.deleteOne({_id: memberId});
+        // Check if not deleted
+        if(data.deletedCount === 0) {
+            return {status: "fail",  message: "Delete failed"}
+        }
 
+        // Finnaly returns status
+        return {status: 'success', message: "Members delete success!"}
     }catch(e) {
         console.log(e.toString());
         return {status: "error", message: "Internal server error"}
