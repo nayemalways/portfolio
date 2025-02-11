@@ -19,9 +19,10 @@ export const createBlogService = async (req) => {
 
 
 // Read Blog
-export const readBlogService = async (req) => {
+export const readBlogService = async () => {
     try {
-
+        const data = await BlogModel.find();
+        return {status: 'success', data: data};
     }catch(e) {
         console.log(e.toString());
         return {status: "error",  message: "Internal server error"}

@@ -10,7 +10,7 @@ export const createBlog = async (req, res) => {
 
 // Read Blog controller
 export const readBlog = async (req, res) => {
-    const result = await readBlogService(req);
+    const result = await readBlogService();
     res.json(result)
 }
 
