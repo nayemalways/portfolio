@@ -5,7 +5,12 @@ const DataSchema = mongoose.Schema({
     position: {type: "String", required: true},
     experience: {type: "String", required: true},
     image: {type: "String", required: true},
-})
+},
+{
+    timestamps: true,
+    versionKey: false
+}
+)
 
 const TeamsModel = mongoose.model('teams', DataSchema);
 
