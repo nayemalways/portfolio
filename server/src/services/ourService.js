@@ -62,7 +62,17 @@ export const serviceUpdate = async (req) => {
 // Service delete
 export const serviceDelete = async (req) => {
     try {
-
+        // Get serviceId from url params
+        const serviceId = req.params['serviceId'];
+        // Delete Service data from Database
+        const data = await ServiceModel.deleteOne({_id: serviceId});
+        // Check if not deleted
+        if(data.deletedCount === 0) {
+            return {status: "fail",  message: "Delete failed"}
+        }
+        // Finnaly return status
+        return {status: "success",  message: "Delete success"}
+        
     }catch(e) {
         console.log(e.toString());
         return {status: "error", message: "Internal server error!"};
