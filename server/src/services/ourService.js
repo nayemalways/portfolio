@@ -15,6 +15,7 @@ export const serviceCreate = async (req) => {
 
     }catch(e) {
         console.log(e.toString());
+        return {status: "error", message: "Internal server error!"};
     }
 }
 
@@ -29,15 +30,31 @@ export const serviceRead = async (req) => {
 
     }catch(e) {
         console.log(e.toString());
+        return {status: "error", message: "Internal server error!"};
     }
 }
 
 // Service update
 export const serviceUpdate = async (req) => {
     try {
+        // Get service id from url param
+        const serviceId = req.params['serviceId'];
+        // Get client data
+        const reqBody = req.body;
+        // Update service in Database
+        const data = await ServiceModel.updateOne({_id: serviceId}, reqBody);
 
+        // Check service not updated
+        if(data.modifiedCount === 0) {
+            return {status:"fail", message: "Service updated fail!"}
+        }
+
+        // Finally return status
+        return {status: "success", message: "Service updated success!"};
+        
     }catch(e) {
         console.log(e.toString());
+        return {status: "error", message: "Internal server error!"};
     }
 }
 
@@ -48,6 +65,7 @@ export const serviceDelete = async (req) => {
 
     }catch(e) {
         console.log(e.toString());
+        return {status: "error", message: "Internal server error!"};
     }
 }
 
