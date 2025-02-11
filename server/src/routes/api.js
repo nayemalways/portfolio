@@ -32,8 +32,8 @@ router.get('/delete-service/:serviceId', userAuthentication, ourServiceControlle
 // Team member related API
 router.post('/create-member', userAuthentication, teamController.createMember);
 router.get('/read-member', userAuthentication, teamController.readMember);
-router.post('/update-member', userAuthentication, teamController.updateMember);
-router.get('/update-member', userAuthentication, teamController.deleteMember);
+router.post('/update-member/:memberId', userAuthentication, teamController.updateMember);
+router.get('/update-member/:memberId', userAuthentication, teamController.deleteMember);
 
 
 // Team related APi

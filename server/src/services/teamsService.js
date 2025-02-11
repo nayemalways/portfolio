@@ -32,6 +32,19 @@ export const readMemberService = async () => {
 // Update single member
 export const updateMemberService = async (req) => {
     try {
+        // Get member id from url parmas
+        const memberId = req.params['memberId'];
+        // Get data from client
+        const reqBody = req.body;
+        // Update Team member by specifik id
+        const data = await TeamsModel.updateOne({_id: memberId}, reqBody);
+        // Check if not updated
+        if(data.modifiedCount === 0) {
+            return {status: "fail",  message: "Update failed"}
+        }
+
+        // Finnaly returns status
+        return {status: "success", message: "Update success!"}
 
     }catch(e) {
         console.log(e.toString());
