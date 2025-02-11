@@ -23,7 +23,7 @@ router.get('/delete-blog/:blogId', userAuthentication, blogController.deleteBlog
 router.post('/create-service', userAuthentication, ourServiceController.createService);
 router.get('/read-service', userAuthentication, ourServiceController.readService);
 router.post('/update-service/:serviceId', userAuthentication, ourServiceController.updateService );
-router.get('/delete-service/:serviecId', userAuthentication, ourServiceController.deleteService );
+router.get('/delete-service/:serviceId', userAuthentication, ourServiceController.deleteService );
 
 
 
