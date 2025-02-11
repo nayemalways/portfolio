@@ -1,9 +1,13 @@
 import express from "express";
+import { userAuthentication } from './../middleware/authMiddleware.js';
 import * as userController from "../controllers/userController.js";
 import  * as blogController from "../controllers/blogController.js";
-import { userAuthentication } from './../middleware/authMiddleware.js';
 import * as ourServiceController from "../controllers/ourServiceController.js";
+import * as teamController from "../controllers/teamsController.js";
  
+
+
+
 // Express Router
 const router = express.Router();
 
@@ -24,6 +28,15 @@ router.post('/create-service', userAuthentication, ourServiceController.createSe
 router.get('/read-service', userAuthentication, ourServiceController.readService);
 router.post('/update-service/:serviceId', userAuthentication, ourServiceController.updateService );
 router.get('/delete-service/:serviceId', userAuthentication, ourServiceController.deleteService );
+
+// Team member related API
+router.post('/create-member', userAuthentication, teamController.createMember);
+router.get('/read-member', userAuthentication, teamController.readMember);
+router.post('/update-member/:memberId', userAuthentication, teamController.updateMember);
+router.get('/delete-member/:memberId', userAuthentication, teamController.deleteMember);
+
+
+// Team related APi
 
 
 
