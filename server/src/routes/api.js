@@ -26,5 +26,8 @@ router.post('/update-service/:serviceId', userAuthentication, ourServiceControll
 router.get('/delete-service/:serviceId', userAuthentication, ourServiceController.deleteService );
 
 
+// Team related APi
+
+
 
 export default router;
