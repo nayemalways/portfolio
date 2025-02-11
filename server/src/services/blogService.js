@@ -57,6 +57,15 @@ export const updateBlogService = async (req) => {
 // Delete Blog
 export const deleteBlogService = async (req) => {
     try {
+        const blogId = req.params['blogId'];
+        const data = await BlogModel.deleteOne({_id: blogId});
+        // Check if not deleted
+        if(data.deletedCount === 0) {
+            return {status: "fail",  message: "Delete failed"}
+        }
+
+        /// Finnaly return status
+        return {status: "success", data: data}
 
     }catch(e) {
         console.log(e.toString());
