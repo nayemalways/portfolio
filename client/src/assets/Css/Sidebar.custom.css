@@ -1,12 +1,81 @@
+/* Utility class  */
+.active {
+    background-color:  rgb(0, 255, 183);
+    color: #000;
+}
 
-.nav-item {
-    margin-top: 2rem;
-    border-radius: 2px;
-    display: flex;
-    padding-left: 5px;
-    transition: all .3s ease-in-out;
-     
-    &:active {
-        background: #6acffa
+
+
+/* Main component style  */
+.sidebar {
+    max-width: 300px;
+    .dashboard-logo {
+        color: rgb(0, 255, 183);
+        font-size: clamp(15px, 2vw, 26px);
+    } 
+
+        .nav-item {
+            margin-top: 2rem;
+            border-radius: 2px;
+            display: flex;
+            padding-left: 5px;
+            transition: all .2s ease-in-out;
+            padding: 6px 8px;
+            
+                &:hover {
+                background-color:  rgb(0, 255, 183);
+                color: #000;
+                } 
+            
+                .nav-link {
+                    display: block;
+                    width: 100%;
+                    padding-left: 1rem;
+                    font-size: clamp(1rem, 2vw, 1.25rem);
+                        span {
+                            font-size: clamp(1rem, 2vw, 1.25rem);
+                        }
+                }
+        }
+}
+
+
+
+@media screen and (max-width: 670px) {
+    div {
+        padding: 0 !important;
+
+            .sidebar {
+                .dashboard-logo {
+                        p {
+                            display: none;
+                        }
+                        .dashboard-icon {
+                            display: block !important;
+                            width: 100%;
+                            /* text-align: center; */
+                        }
+                }
+                .nav-item {
+                    .nav-link {
+                        width: 100%;
+                        text-align: center;
+                            span {
+                                display: none;
+                            }
+                    }
+                }   
+            }
     }
 }
+
+@media screen and (max-width: 400px) {
+    .dashboard-logo {
+        margin-right: 6px;
+    }
+}
+
+
+
+
+
