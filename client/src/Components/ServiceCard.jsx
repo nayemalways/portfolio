@@ -15,7 +15,7 @@ const ServiceCard = () => {
                     <img style={{width: "25px"}} className='py-3' src={iconImage} alt="" />
                     <h5 className="card-title text-light">UI/UX design</h5>
                     <p className="card-text  text-secondary">We craft pixel-parfect design with Figma, designing experiences that captivate and convert. No clunky layouts, just smooth flows that guid your visitors.</p>
-                    <Link href="/contact" className="btn btn-outline-info">Start a project <FaCircleArrowRight /></Link>
+                    <Link to="/contact" className="btn btn-outline-info">Start a project <FaCircleArrowRight /></Link>
                 </div>
             </div>
         </>
