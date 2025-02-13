@@ -15,6 +15,7 @@ import '../src/assets/Css/Services.custom.css';
 import '../src/assets/Css/BlogDetails.custom.css';
 import '../src/assets/Css/Responsive.custom.css';
 import '../src/assets/Css/Sidebar.custom.css';
+import '../src/assets/Css/DashHome.custom.css';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

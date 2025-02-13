@@ -1,0 +1,19 @@
+
+.color {
+    color: #28ecb4;
+}
+
+.table-style {
+    padding: 0 28px !important;
+}
+
+.text-ellipsis {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 150px;
+}
+
+.table-img{
+    max-width: 50px;
+}

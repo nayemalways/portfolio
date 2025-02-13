@@ -1,7 +1,6 @@
 import React from 'react';
 import Sidebar from '../Sidebar';
-import Footer from '../../Footer';
-
+ 
 const DashboardLayout = ({children}) => {
     return (
         < >
@@ -11,7 +10,7 @@ const DashboardLayout = ({children}) => {
                         <div className="col-md-2 col-lg-2 col-2 m-0 p-0 ">
                              <Sidebar/>
                         </div>
-                        <div className="col-md-10 col-lg-10 col-10 vh-100 overflow-y-scroll">
+                        <div className="col-md-10 col-lg-10 col-10 vh-100 overflow-y-scroll p-0">
 
 
                               {children}
