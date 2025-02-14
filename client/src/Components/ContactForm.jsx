@@ -7,7 +7,7 @@ const ContactForm = () => {
                 <div style={{height: '100vh'}} className="container">
                     <div className="row d-flex justify-content-center align-items-center">
         
-                        <div className="col-md-6 text-start   bg-dark p-5 rounded rounded-4">
+                        <div className="col-md-6 text-start bg-dark p-5 rounded rounded-4">
                             <h2 className='h1_color fw-bold text-center'>Get in touch</h2>
                             <form id='form' action="">
                                 <div className='pt-3'>
