@@ -2,7 +2,7 @@ import React from 'react';
 
 const FormField = () => {
     return (
-        <form  className='w-100'>
+        <form id='form' className='w-100'>
             <div className="container ">
                 <div className="row">
                      
@@ -19,7 +19,7 @@ const FormField = () => {
                     <div className="col-md-6 col-sm-6 col-9 m-auto mt-3">
                         <label className='form-label text-start d-block' htmlFor="fullName">Position:</label>
                         <select className='form-control' name="" id="">
-                            <option value="">Choose Position</option>
+                            <option value="">eg. Software Engineer</option>
                             <option value="Web Developer">Frontend Developer</option>
                             <option value="Web Developer">Backend Developer</option>
                             <option value="UI/UX Designer">UI/UX Designer</option>

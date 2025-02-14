@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 
-
+/* Base Styling  */
 *,
 ::after,
 ::before{
@@ -22,6 +22,32 @@ body {
   padding: 0;
 }
 
+
+#form input::placeholder,
+#form textarea::placeholder {
+    color: #ebe3e373;  
+}
+
+
+#form input ,
+#form textarea {
+    background: #000; 
+    border-color:  #ebe3e373 !important;
+    outline: none !important;
+    color: #fff;
+}
+
+
+
+#form input:focus ,
+#form textarea:focus {
+     border: none;
+}
+
+
+
+
+/* Utility class  */
 .h1_color {
   background: linear-gradient(90deg,rgb(42, 129, 255), rgb(134, 221, 250));
   background-clip: text ;

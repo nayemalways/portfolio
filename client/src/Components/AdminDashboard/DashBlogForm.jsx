@@ -7,11 +7,11 @@ const DashBlogForm = () => {
 
     return (
         <>
-            <form>
+            <form id='form'>
                 <div className="container">
                     <div className="row">
                                         
-                        <div className="col-md-12  mt-3">
+                        <div className="col-md-12 mt-3">
                             <label className='form-label' htmlFor="fullName">Title:</label>
                             <input className='form-control' type="text" name="fullName" id="fullName" placeholder='Enter title here..' />
                         </div>

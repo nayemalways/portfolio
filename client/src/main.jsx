@@ -9,13 +9,12 @@ import './index.css';
 import '../src/assets/Css/Nabbar.custom.css';
 import '../src/assets/Css/Hero.custom.css';
 import '../src/assets/Css/Blog.custom.css';
-import '../src/assets/Css/Contact.custom.css';
 import '../src/assets/Css/About.custom.css';
 import '../src/assets/Css/Services.custom.css';
 import '../src/assets/Css/BlogDetails.custom.css';
 import '../src/assets/Css/Responsive.custom.css';
-import '../src/assets/Css/Dashboard.custom.css';
 import '../src/assets/Css/Sidebar.custom.css';
+import '../src/assets/Css/Dashboard.custom.css';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
