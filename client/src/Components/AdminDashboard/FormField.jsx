@@ -6,17 +6,17 @@ const FormField = () => {
             <div className="container ">
                 <div className="row">
                      
-                    <div className="col-md-6 col-sm-4 col-9 m-auto mt-3  ">
+                    <div className="col-md-6 col-sm-12   m-auto mt-3  ">
                         <label className='form-label text-start d-block' htmlFor="fullName">Full Name:</label>
                         <input className='form-control' type="text" name="fullName" id="fullName" placeholder='Your full name..' />
                     </div>
                     
-                    <div className="col-md-6 col-sm-6 col-9 m-auto mt-3">
+                    <div className="col-md-6 col-sm-12   m-auto mt-3">
                         <label className='form-label text-start d-block' htmlFor="experience">Experience:</label>
                         <input className='form-control' type="text" name="experience" id="experience" placeholder='eg. 2 years experience' />
                     </div>
 
-                    <div className="col-md-6 col-sm-6 col-9 m-auto mt-3">
+                    <div className="col-md-6 col-sm-12   m-auto mt-3">
                         <label className='form-label text-start d-block' htmlFor="fullName">Position:</label>
                         <select className='form-control' name="" id="">
                             <option value="">eg. Software Engineer</option>
@@ -28,12 +28,12 @@ const FormField = () => {
                         </select>
                     </div>
                     
-                    <div className="col-md-6 col-sm-4 col-9 m-auto mt-3">
+                    <div className="col-md-6 col-sm-6   mt-3">
                         <label className='form-label text-start d-block' htmlFor="image">Image:</label>
                         <input className='form-control' type="file" name="image" id="image"  />
                     </div>
                     <div className="col-md-12 mt-3">
-                        <button className='w-100 fw-bold fs-5 btn color btn-secondary' type='submit'>Send</button>
+                        <button className='w-100 fw-bold btn color btn-secondary' type='submit'>Send</button>
                     </div>
 
                     
