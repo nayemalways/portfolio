@@ -18,7 +18,7 @@ const DashHome = () => {
                         <Table title='Team overview'/>
 
                         {/* Service Section Table  */}
-                        <Table title='Serviec overview'/>
+                        <Table title='Service overview'/>
                     
                         
                          
