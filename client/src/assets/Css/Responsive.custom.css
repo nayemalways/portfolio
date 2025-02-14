@@ -1,4 +1,5 @@
 
+/* Blog section */
 @media screen and (max-width: 768px) {
     .blog-section {
         margin-top: 4rem;
@@ -10,6 +11,8 @@
     }
 }
 
+
+ /* Team section  */
 @media screen and (max-width: 768px) {
     .team-section {
         margin-top: 18rem;
@@ -29,3 +32,13 @@
         }
     }
 }
+
+
+
+/* Dashboard Service section  */
+@media screen and (max-width: 670px) {
+     .p-sm {
+        padding: 1rem;
+     }
+}
+
