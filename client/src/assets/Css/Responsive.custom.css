@@ -15,3 +15,17 @@
         margin-top: 18rem;
     }
 }
+
+
+/* Quill Js Text editor small device text-align: left  */
+@media screen and (max-width: 768px) {
+    .container {
+        & .row {
+            & div {
+                div {
+                    text-align: left;
+                }
+            }
+        }
+    }
+}
