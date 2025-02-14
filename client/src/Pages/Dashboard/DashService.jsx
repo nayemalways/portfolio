@@ -31,7 +31,7 @@ const DashService = () => {
                                         </div>
                                         
                                         <div className="col-lg-8 col-md-10 m-auto mt-3">
-                                            <button className='w-100 fw-bold fs-5 btn color btn-secondary' type='submit'>Send</button>
+                                            <button className='w-100 fw-bold btn color btn-secondary' type='submit'>Send</button>
                                         </div>
 
                                         
