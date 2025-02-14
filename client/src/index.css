@@ -45,3 +45,12 @@ footer {
   border-top: 1px solid #dddddd35;
 }
 
+
+/* Quill js background color  (Dashboard)*/
+.ql-editor {
+  background: #fff;
+}
+
+.ql-toolbar {
+   background-color: #00FFB7;
+}
