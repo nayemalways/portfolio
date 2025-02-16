@@ -74,7 +74,7 @@ const DashBlogForm = ({loader}) => {
       }, [quill]);
 
 
-      // Image convert to Base64 string and set as formik value
+    // Image convert to Base64 string and set as formik value
     const handleImage = (e) => {
         const file = e.target.files[0];
         if(file) {
@@ -86,6 +86,10 @@ const DashBlogForm = ({loader}) => {
         e.target.value = ''; // Clear field
     }
     
+    
+
+
+
     
 
     return (
