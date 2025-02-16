@@ -4,18 +4,25 @@ import  { useFormik } from 'formik';
 import * as Yup from 'yup';
 
 import { getBase64 } from '../../Helper/helper.js';
-import RequestAPI from '../../ApiRequest/Api.js';
-
+import { ApiRequest } from './../../ApiRequest/Api.js';
+ 
 import 'quill/dist/quill.snow.css';
 
 
- 
 
 
 
-const DashBlogForm = () => {
+const DashBlogForm = ({loader}) => {
+
+    const [loading, setLoading] = useState(false);
+
+    /*This function from Parent components (DashBlog.jsx). 
+     Sending true or false for Loading Animations*/
+    loader(loading);
 
 
+
+    // Handling Form by Formik
     const formik = useFormik(
         {
             initialValues: {
@@ -24,7 +31,6 @@ const DashBlogForm = () => {
                 image: ''
             },
     
-
             // Validate the form field
             validationSchema: Yup.object({
                 title: Yup.string().min(5, "Title should at least 5 character").required('Title is required'),
@@ -32,20 +38,29 @@ const DashBlogForm = () => {
                 image: Yup.string().required('Image required')
             }),
     
-
             // Form submit
             onSubmit: async (values, {resetForm}) => {
-                const result =  await RequestAPI('POST', '/create-blog', values);
-                console.log(result);
-                resetForm(); // Reset the form
+
+                // Set loading animation when posting blog
+                setLoading(true); 
+                // Post blog via API to Server
+                const result =  await ApiRequest("POST", '/create-blog', values);
+                setLoading(false); // Remove loading animation when API has responsed
+
+                 // Reset quill field
+                if(result) {
+                    if(quill) {
+                        quill.root.innerHTML = '';
+                    }
+                }
+
+                // Reset the form inputs
+                resetForm(); 
+
             }
         }
     )
 
-
-
-    
- 
 
     // Quilljs text editor text picking up and set in the formik value
     const { quill, quillRef } = useQuill();
@@ -59,9 +74,8 @@ const DashBlogForm = () => {
       }, [quill]);
 
 
-
       // Image convert to Base64 string and set as formik value
-      const handleImage = (e) => {
+    const handleImage = (e) => {
         const file = e.target.files[0];
         if(file) {
             getBase64(file, (StringBase64) => {
@@ -70,14 +84,15 @@ const DashBlogForm = () => {
         }
 
         e.target.value = ''; // Clear field
-      }
+    }
     
     
 
     return (
         <>
+                
+                
             <form id='form' onSubmit={formik.handleSubmit}>
-            
                 <div className="container">
                     <div className="row">
                                         
@@ -106,7 +121,7 @@ const DashBlogForm = () => {
                             <div className="col-md-6 mt-5">
                                 <label className='form-label' htmlFor="image">Image:</label>
                                 <input 
-                                    onChange={handleImage}  
+                                    onChange={handleImage} 
                                     className='form-control' 
                                     type="file" 
                                     name="image" 

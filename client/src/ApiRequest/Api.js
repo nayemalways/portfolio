@@ -1,43 +1,46 @@
-import axios from 'axios';
+import axios from "axios";
+import toast from 'react-hot-toast';
 
 
 
 
- const RequestAPI = async (Method, Endpoint, Reqbody) => {
-
-
-    
-
+export const ApiRequest = async (method, EndPoint, postBody) => {
     try {
-        const URL = `http://localhost:6000/v1`;
-
-        // Request configuration including method, headers, and body (if applicable)
+        const basUrl = `http://localhost:3000/v1`;
         const config = {
-            method: Method,
-            url: `${URL}${Endpoint}`,
+            method: method,
+            url: `${basUrl}${EndPoint}`,
             headers: {
                 "Content-Type": "application/json",
+                "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImV4YW1wbGVAZ21haWwuY29tIiwiVXNlcl9pZCI6IjY3YWI0NTRiZTc2ZTE4Njg1M2VkN2ZkYiIsImlhdCI6MTczOTcyMzI1OCwiZXhwIjoxNzQyMzE1MjU4fQ.vronbtjXTVzTq_US7QiX_bQ2CcRNAK0PHcvWIxFTHbw"
             },
-            withCredentials: true,  // Include credentials for cross-origin requests
-        };
+            withCredentials: true
+        }
 
-        // Add body only if it's not a GET or DELETE request and body is provided
-        if (Method !== "GET" && Method !== 'DELETE' && Reqbody) {
-            config.data = Reqbody;  // Axios uses 'data' instead of 'body' for the request body
+        // If request not GET and DELETE the postBody will included as data in config
+        if(method !== "GET" && method !== "DELETE" && postBody) {
+            config.data = postBody
         }
 
 
-        // Perform the axios request with the necessary configuration
+        // Requested to server
         const response = await axios(config);
-        return response.data;
 
-        
-    } catch (error) {
-        console.error('Error:', error);
+
+        //Toast message
+        if(response?.data?.status === "success") {
+            toast.success(response?.data?.message);
+            return true;
+        }else {
+            toast.error(response?.data?.message);
+            return false;
+        }
+
+
+    }catch(e) {
+        // Error handling
+        console.log(e.toString());
+        toast.error(`Something went wrong`);
         return false;
     }
 }
-
-
-
-export default RequestAPI;
