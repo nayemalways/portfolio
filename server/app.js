@@ -13,7 +13,7 @@ import {DATABASE_URL, USER_NAME, PASSWORD, PORT, URL_ENCODE, MAX_JSON_SIZE, MAX_
 const app = express();
 
 // Global Applications middleware
-app.use(cors());
+app.use(cors({ credentials: true, origin: "http://localhost:5173" }));
 app.use(helmet());
 app.use(hpp());
 app.use(cookieParser());
