@@ -38,7 +38,7 @@ const DashBlogForm = ({loader}) => {
             // Validate the form field
             validationSchema: Yup.object({
                 title: Yup.string().min(5, "Title should at least 5 character").required('Title is required'),
-                description: Yup.string().min(5, "Description should at least 5 character").required('Title is required'),
+                description: Yup.string().min(5, "Description should at least 5 character").required('Description is required'),
                 image: Yup.string().required('Image required')
             }),
     
