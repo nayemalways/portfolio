@@ -1,7 +1,4 @@
 import axios from "axios";
-import dotenv from "dotenv";
-dotenv.config();
-
 
 export function getBase64 (file, callback) {
 
@@ -15,14 +12,14 @@ export function getBase64 (file, callback) {
 
 
 // Cloudinary set up
-export const cloudinaryImageUpload = async (file) => {
+export const cloudinaryImageUpload = async (image) => {
     const data = new FormData();
-    data.append(file, 'image');
+    data.append("file", image);
     data.append('upload_preset', 'Images_preset');
 
     try {
 
-        let cloudName = process.env.cloudinaryName;
+        let cloudName = import.meta.env.VITE_CLOUDINARY_NAME;
         let api = `https://api.cloudinary.com/v1_1/${cloudName}/image/upload`;
 
         const response = await axios.post(api, data);
