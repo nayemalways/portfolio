@@ -24,7 +24,6 @@ export const cloudinaryImageUpload = async (image) => {
 
         const response = await axios.post(api, data);
         const { secure_url } = response.data;
-        console.log(secure_url);
         return secure_url;
 
     }catch(e) {
