@@ -5,7 +5,7 @@ import * as Yup from 'yup';
 import toast from 'react-hot-toast';
 
 
-import { getBase64 } from '../../Helper/helper.js';
+import { cloudinaryImageUpload } from '../../Helper/helper.js';
 import { ApiRequest } from './../../ApiRequest/Api.js';
  
 import 'quill/dist/quill.snow.css';
@@ -81,14 +81,30 @@ const DashBlogForm = ({loader}) => {
 
 
     // Image convert to Base64 string and set as formik value
-    const handleImage = (e) => {
-        const file = e.target.files[0];
-        if(file) {
-            getBase64(file, (StringBase64) => {
-                 formik.setFieldValue("image", StringBase64); // Dynamically update the `img` field
-            });
-        }
+    const handleImage = async (e) => {
+        try {
+            const image = e.target.files[0];
+    
+            if (image) {
+                 
+                // Upload image to cloud
+                const result = await cloudinaryImageUpload(image);
 
+                if(result) {
+                    toast.success('Image uploaded');
+                }else{
+                    toast.error("Image couldn't uplod");
+                }
+                
+                // set image url to formik
+                formik.setFieldValue('image', result);
+    
+                // cleared the field
+                e.target.value = '';
+            }
+        } catch (e) {
+            console.log(e);
+        }
     }
     
     

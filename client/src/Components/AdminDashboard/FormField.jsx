@@ -2,7 +2,7 @@ import React from 'react';
 import toast from 'react-hot-toast';
 import * as Yup from 'yup';
 import { useFormik } from 'formik';
-import { getBase64 } from '../../Helper/helper';
+import { cloudinaryImageUpload } from '../../Helper/helper';
 import { ApiRequest } from '../../ApiRequest/Api';
 
 
@@ -41,11 +41,29 @@ const FormField = () => {
 
 
     // Convert image int Base64 and set inside formik
-    const imageHandler = (e) => {
-        const file = e.target.files[0];
-        getBase64(file, (imageString) => {
-            formik.setFieldValue('image', imageString);
-        })
+    const imageHandler = async (e) => {
+        try {
+            const image = e.target.files[0];
+    
+            if (image) {
+                 
+                // Upload image to cloud
+                const result = await cloudinaryImageUpload(image);
+                if(result) {
+                    toast.success('Image uploaded');
+                }else{
+                    toast.error("Image couldn't uplod");
+                }
+                
+                // set image url to formik
+                formik.setFieldValue('image', result);
+    
+                // cleared the field
+                e.target.value = '';
+            }
+        } catch (e) {
+            console.log(e);
+        }
     }
 
 
