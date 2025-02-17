@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useQuill } from 'react-quilljs';
 import  { useFormik } from 'formik';
 import * as Yup from 'yup';
+import toast from 'react-hot-toast';
+
 
 import { getBase64 } from '../../Helper/helper.js';
 import { ApiRequest } from './../../ApiRequest/Api.js';
@@ -16,9 +18,11 @@ const DashBlogForm = ({loader}) => {
 
     const [loading, setLoading] = useState(false);
 
-    /*This function from Parent components (DashBlog.jsx). 
-     Sending true or false for Loading Animations*/
-    loader(loading);
+    /* When component are rendered this state will update 
+    and will goes to DashBlogs.jsx (parent) component*/
+     useEffect(() => {
+        loader(loading);
+    }, [loading])
 
 
 
@@ -41,14 +45,16 @@ const DashBlogForm = ({loader}) => {
             // Form submit
             onSubmit: async (values, {resetForm}) => {
 
-                // Set loading animation when posting blog
+                // Turn on loading
                 setLoading(true); 
-                // Post blog via API to Server
+                // Posting blog
                 const result =  await ApiRequest("POST", '/create-blog', values);
-                setLoading(false); // Remove loading animation when API has responsed
+                // Turn off loading
+                setLoading(false);  
 
-                 // Reset quill field
-                if(result) {
+                // Toast message and clear quill
+                if(result?.status === 'success') {
+                    toast.success(result?.message);
                     if(quill) {
                         quill.root.innerHTML = '';
                     }
@@ -114,7 +120,7 @@ const DashBlogForm = ({loader}) => {
 
 
                             <div className='col-md-12 my-5'>
-                                <div style={{ width: '100%', height: "25rem" }} className='text-light rounded rounded-sm '>
+                                <div style={{ width: '100%', height: "20rem" }} className='text-light rounded rounded-sm '>
                                     <div ref={quillRef}   />
                                 </div>
                                 {formik.touched.description && formik.errors.description && <span style={{color: "red"}}>{formik.errors.description}</span>}
