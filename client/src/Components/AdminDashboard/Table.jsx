@@ -34,8 +34,8 @@ const Table = ({title, data}) => {
                                             <td className='align-content-center'>{index + 1}</td>
                                             <td className='w-25 align-content-center'><img className='table-img rounded rounded-2' src={item.image} alt="" /></td>
                                             <td  className='text-ellipsis align-content-center'> {item.title || item.name} </td>
-                                            <td><button className='btn'><MdDeleteSweep /></button></td>
-                                            <td className='align-content-center'><Link to={`/dashboard/update/${item._id}`} className='d-block'><FaEdit /></Link></td>
+                                            <td><button className='btn btn-danger'><MdDeleteSweep /></button></td>
+                                            <td className='align-content-center'><Link to={`/dashboard/update/${item._id}`} className='d-block btn btn-success'><FaEdit /></Link></td>
                                         </tr>
                                     )
                                 })
