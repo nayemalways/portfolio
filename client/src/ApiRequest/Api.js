@@ -25,16 +25,16 @@ export const ApiRequest = async (method, EndPoint, postBody) => {
 
         // Requested to server
         const response = await axios(config);
-
+        return response.data;
 
         //Toast message
-        if(response?.data?.status === "success") {
-            toast.success(response?.data?.message);
-            return true;
-        }else {
-            toast.error(response?.data?.message);
-            return false;
-        }
+        // if(response?.data?.status === "success") {
+        //     toast.success(response?.data?.message);
+        //     return ;
+        // }else {
+        //     toast.error(response?.data?.message);
+        //     return false;
+        // }
 
 
     }catch(e) {

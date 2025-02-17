@@ -7,7 +7,9 @@ import image from '../../assets/image/people-image.png'
 
 
 
-const Table = ({title}) => {
+const Table = ({title, data}) => {
+     
+
     return (
         <>
              <div className="col-12 col-md-12 col-lg-12 table-style">
@@ -24,13 +26,23 @@ const Table = ({title}) => {
                             </tr>
                         </thead>
                         <tbody>
-                            <tr className='text-center'>
-                                <td className='align-content-center'>1</td>
-                                <td className='w-25 align-content-center'><img className='table-img rounded rounded-2' src={image} alt="" /></td>
-                                <td  className='text-ellipsis align-content-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id facere fuga, cumque atque ipsum excepturi quisquam dicta dolorem rerum tempore.</td>
-                                <td><button className='btn'><MdDeleteSweep /></button></td>
-                                <td className='align-content-center'><Link to='/dashboard/update' className='d-block'><FaEdit /></Link></td>
-                            </tr>
+
+                            {
+
+                                data.map((item, index) => {
+                                    return (
+                                        <tr key={index} className='text-center'>
+                                            <td className='align-content-center'>{index + 1}</td>
+                                            <td className='w-25 align-content-center'><img className='table-img rounded rounded-2' src={item.image} alt="" /></td>
+                                            <td  className='text-ellipsis align-content-center'> {item.title || item.name} </td>
+                                            <td><button className='btn'><MdDeleteSweep /></button></td>
+                                            <td className='align-content-center'><Link to={`/dashboard/update/${item._id}`} className='d-block'><FaEdit /></Link></td>
+                                        </tr>
+                                    )
+                                })
+
+                            }
+                            
                         </tbody>
                     </table>
                 </div>
