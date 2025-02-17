@@ -1,16 +1,24 @@
 import React, { useEffect, useState } from 'react';
 
-
 import DashboardLayout from '../../Components/AdminDashboard/DashboardMasterLayout/DashboardLayout';
 import Table from '../../Components/AdminDashboard/Table';
 import { ApiRequest } from '../../ApiRequest/Api';
+import Loader from '../../Components/Loader';
+
+
+
 
 const DashHome = () => {
 
+    const [skeleton, setSkeleton] = useState(true);
+
+
+    // Manage State
     const [blog, setBlog] = useState([]);
     const [service, setService] = useState([]);
     const [team, setTeam] = useState([]);
 
+    // Call API
     useEffect(() => {
         (async () => {
             const blogs = await ApiRequest('GET', '/read-blog');
@@ -21,6 +29,9 @@ const DashHome = () => {
             setBlog(blogs.data);
             setService(services.data);
             setTeam(teams.data);
+
+            // Turn off skeleton loading
+            setSkeleton(false);
         })()
     }, [])
 
@@ -31,14 +42,22 @@ const DashHome = () => {
                 <div className="container py-5">
                     <div className="row vh-100 ">
 
-                        {/* Team Section Table  */}
-                        <Table data={team} title='Team overview'/>
+                        {/* Team Section Table  */} 
+                        {
+                            skeleton ? ( <Loader/>):( <Table data={team} title='Team overview'/> )
+                        }
 
                         {/* Service Section Table  */}
-                        <Table data={service} title='Service overview'/>
-                    
+                       
+                        {
+                            skeleton ? (  <Loader/>):( <Table data={service} title='Service overview'/> )
+                        }
+
+
                         {/* Blog Section Table  */}
-                        <Table  data={blog} title='Blog overview'/>
+                        {
+                            skeleton ? ( <Loader/>):(  <Table  data={blog} title='Blog overview'/> )
+                        }
                         
                          
                     </div>

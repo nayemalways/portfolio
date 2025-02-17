@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 import { FaEdit } from "react-icons/fa";
 import { MdDeleteSweep } from "react-icons/md";
-import image from '../../assets/image/people-image.png'
 
 
 
