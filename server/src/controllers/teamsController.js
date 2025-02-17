@@ -5,7 +5,7 @@ import { createMemberService, deleteMemberService, readMemberService, updateMemb
 // Create member controller
 export const createMember = async (req, res) => {
     const result = await createMemberService(req);
-    res.json({result});
+    res.json(result);
 }
 
 

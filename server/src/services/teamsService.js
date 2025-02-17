@@ -6,8 +6,8 @@ import TeamsModel from "../models/TeamModel.js";
 export const createMemberService = async (req) => {
     try {
         const reqBody = req.body;
-        const data = await TeamsModel.create(reqBody);
-        return {status: "success", data: data};
+        await TeamsModel.create(reqBody);
+        return {status: "success", message: 'Member added successfully'};
     }catch(e) {
         console.log(e.toString());
         return {status: "error", message: "Internal server error"}
