@@ -83,7 +83,6 @@ const DashBlogForm = ({loader}) => {
             });
         }
 
-        e.target.value = ''; // Clear field
     }
     
     
