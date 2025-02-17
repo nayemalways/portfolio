@@ -12,7 +12,7 @@ export const createMember = async (req, res) => {
 // Read member controller
 export const readMember = async (req, res) => {
     const result = await readMemberService();
-    res.json({result});
+    res.json(result);
 }
 
 
