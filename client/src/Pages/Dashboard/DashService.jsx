@@ -90,7 +90,7 @@ const DashService = () => {
                         <div className="col-lg-8 col-md-10 col-12 border border-secondary rounded rounded-4 p-3 bg-dark">
                             <h2 className='color text-center mb-4'>Add Services</h2>
                             
-                            <form onSubmit={formik.handleSubmit} id='form' className='p-sm'>
+                            <form onSubmit={formik.handleSubmit} id='form'>
                                 <div className="container">
                                     <div className="row">
                                         

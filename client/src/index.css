@@ -59,6 +59,7 @@ body {
 /* Quill js background color  (Dashboard)*/
 .ql-editor {
   background: #00010d;
+  text-align: left !important;
 }
 
 .ql-toolbar {

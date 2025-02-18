@@ -117,7 +117,7 @@ const DashBlogForm = ({loader}) => {
         <>
                 
                 
-            <form id='form' onSubmit={formik.handleSubmit}>
+            {/* <form id='form' onSubmit={formik.handleSubmit}>
                 <div className="container">
                     <div className="row">
                                         
@@ -163,7 +163,55 @@ const DashBlogForm = ({loader}) => {
                                                   
                     </div>
                 </div>
+            </form> */}
+
+
+            <form id='form' onSubmit={formik.handleSubmit}>
+                <div className="container">
+                    <div className="row">
+
+                        <div className="col-12 mt-3">
+                            <label className='form-label' htmlFor="title">Title:</label>
+                            <input 
+                                onChange={formik.handleChange} 
+                                value={formik.values.title}  
+                                className='form-control w-100' 
+                                type="text" 
+                                name="title" 
+                                id="title" 
+                                placeholder='Enter title here..' />
+                                {formik.touched.title && formik.errors.title && <span style={{color: "red"}}>{formik.errors.title}</span>}
+                        </div>
+
+                        <div className='col-12 my-5'>
+                            <div className='text-light rounded rounded-sm' 
+                                style={{ width: '100%', minHeight: '15rem', overflow: 'hidden' }}>
+                                <div ref={quillRef} style={{ height: '15rem' }} />
+                            </div>
+                            {formik.touched.description && formik.errors.description && <span style={{color: "red"}}>{formik.errors.description}</span>}
+                        </div>
+
+                        <div className="col-12 col-md-6 pb-3">
+                            <label className='form-label' htmlFor="image">Image:</label>
+                            <input 
+                                onChange={handleImage} 
+                                className='form-control w-100' 
+                                type="file" 
+                                name="image" 
+                                id="image"  />
+                                {formik.touched.image && formik.errors.image && <span style={{color: "red"}}>{formik.errors.image}</span>}
+                        </div>
+
+                        <div className="col-12 mt-3">
+                            <button className='w-100 fw-bold btn color btn-secondary' type='submit'>Send</button>
+                        </div>
+
+                    </div>
+                </div>
             </form>
+
+
+
         </>
     );
 };
