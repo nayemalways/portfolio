@@ -37,17 +37,21 @@ body {
     color: #fff;
 }
 
-
-
 #form input:focus ,
 #form textarea:focus {
      border: none;
 }
 
+/* Footer styling  */
+footer {
+  border-top: 1px solid #dddddd35;
+}
 
 
 
-/* Utility class  */
+
+
+/* --------------Utility Class------------ */
 .h1_color {
   background: linear-gradient(90deg,rgb(42, 129, 255), rgb(134, 221, 250));
   background-clip: text ;
@@ -72,12 +76,31 @@ body {
   }
 }
 
+/* Dashboard utility Class */
+.color {
+  color: #28ecb4;
+}
+
+.table-img{
+  max-width: 50px;
+}
+
+.bg-color {
+  background: #212529;
+}
+
  
 
 
-/* Footer styling  */
-footer {
-  border-top: 1px solid #dddddd35;
-}
+
+
+
+
+
+
+
+
+
+
 
 
