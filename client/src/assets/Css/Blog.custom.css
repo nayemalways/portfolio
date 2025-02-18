@@ -23,6 +23,17 @@
     text-overflow: ellipsis;
 }
 
+.inside-image {
+    p {
+        span {
+            font-size: clamp(13px, 2vw, 17px) !important;
+        }
+        img {
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+}
 
 
 /* ------------Blog Details Page---------- */
@@ -38,12 +49,10 @@
 }
 
 .blog_title {
-    font-size: clamp(18px, 4vw, 30px);
+    font-size: clamp(18px, 4vw, 35px);
 }
 
-.blog_desc {
-    font-size: clamp(13px, 2vw, 16px);
-}
+
 
 
 @media screen and (max-width: 768px) {

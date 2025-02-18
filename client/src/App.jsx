@@ -29,7 +29,7 @@ import PrivateRoute from './PrivateRoute/PrivateRoute';
           <Route path="/blog" element={<Blog />} />
           <Route path="/service" element={<Service />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/blog-details" element={<BlogDetails />} />
+          <Route path="/blog-details/:blogId" element={<BlogDetails />} />
 
           {/* Dashboard Routing */}
           <Route path="/dashboard" element={<PrivateRoute><DashHome /></PrivateRoute>}  />
