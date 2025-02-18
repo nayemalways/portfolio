@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import Layout from '../../Layout/Layout';
-
 import { useParams } from 'react-router-dom';
+import { format } from 'date-fns';
+import { bn } from 'date-fns/locale';
+
+import Layout from '../../Layout/Layout';
 import { ApiRequest } from '../../ApiRequest/Api';
 
 
@@ -9,6 +11,7 @@ import { ApiRequest } from '../../ApiRequest/Api';
 const BlogDetails = () => {
     const { blogId } = useParams();
     const [blog, setBlog] = useState([]);
+    const [date, setDate] = useState('');
      
     useEffect(() => {
         (async () => {
@@ -18,10 +21,19 @@ const BlogDetails = () => {
     }, [])
 
 
+   // Check if data is available
     const data = blog[0];
 
+    // MongoDB time formatting
+    useEffect(() => {
+        if (data?.createdAt) {
+            const readableTime = format(new Date(data.createdAt), "PPpp", {locale: bn});
+            setDate(readableTime.slice(0, 22));
+        }
+    }, [data]);  // Add data as a dependency
+    
 
-    console.log( data?.title);
+
 
     return (
         <Layout>
@@ -33,7 +45,7 @@ const BlogDetails = () => {
                                 <img className='img-fluid rounded rounded-4' src={data?.image} alt="" />
                                 <div className="blog-body text-start pt-4">
                                     <h1 className='blog_title text-white'> { data?.title } </h1>
-                                    <span className='shadow shadow-4 bg-secondary text-warning d-inline-block py-1 px-2 my-3 rounded rounded-4 '>10-02-2025</span>
+                                    <span className='shadow shadow-4 bg-dark text-white d-inline-block py-2 px-3 my-3 rounded rounded-4 shadow shadow-lg'> Published:- {date} </span>
 
                                     { data?.description && (
                                         <div  className=' text-start inside-image line-spacing' dangerouslySetInnerHTML={{ __html: data.description }}></div>
