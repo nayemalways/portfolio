@@ -1,20 +1,28 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Layout from '../../Layout/Layout';
 import HeroSection from '../../Components/Main/HeroSection';
-import BlogSection from '../../Components/Main/BlogSection';
+import { ApiRequest } from '../../ApiRequest/Api';
+import HomeBlog from '../../Components/Main/HomeBlog';
 
 
 const Home = () => {
 
-    const blogData = {
-        title: "Latest blog",
-        subtitle: "Be updated with latest technology in the world."
-    }
+    const [blog, setBlog] = useState([]);
+    
+        useEffect(() => {
+            (async () => {
+                const result = await ApiRequest('GET', '/read-blog');
+                setBlog(result.data);
+            })()
+        }, [])
+    
+ 
 
+     
     return (
         <Layout>
             <HeroSection/>
-            <BlogSection {...blogData}/>
+             <HomeBlog data={blog} />
         </Layout>
     );
 };
