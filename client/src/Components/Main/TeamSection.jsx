@@ -1,10 +1,8 @@
 import React from 'react';
 
-import teamImage from '../../assets/image/me.png'
 
-
-
-const TeamSection = () => {
+const TeamSection = ({data}) => {
+ 
     return (
         <>
           <section className='team-section '>
@@ -17,46 +15,25 @@ const TeamSection = () => {
                     </div>
                     <div className="col-md-12 d-flex gap-4 flex-wrap justify-content-center pt-5">
                         
-                        <div className="team-card ratio ratio-1x1 bg-warning rounded rounded-sm">
-                            <img className='w-100 object-fit-cover rounded rounded-sm' src={teamImage} alt="Nayem"/>
-                            <div className="hover-layer">
-                                <div className="text">
-                                    <h5 className=''>Nayem Ahmed</h5>
-                                    <p className='text-info'>Web Developer</p>
-                                    <p className='text-color'>1 Year experiance in web development</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="team-card ratio ratio-1x1 bg-warning rounded rounded-sm">
-                            <img className='w-100 object-fit-cover rounded rounded-sm' src={teamImage} alt="Nayem"/>
-                            <div className="hover-layer">
-                                <div className="text">
-                                    <h5 className=''>Nayem Ahmed</h5>
-                                    <p className='text-info'>Web Developer</p>
-                                    <p className='text-color'>1 Year experiance in web development</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="team-card ratio ratio-1x1 bg-warning rounded rounded-sm">
-                            <img className='w-100 object-fit-cover rounded rounded-sm' src={teamImage} alt="Nayem"/>
-                            <div className="hover-layer">
-                                <div className="text">
-                                    <h5 className=''>Nayem Ahmed</h5>
-                                    <p className='text-info'>Web Developer</p>
-                                    <p className='text-color'>1 Year experiance in web development</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="team-card ratio ratio-1x1 bg-warning rounded rounded-sm">
-                            <img className='w-100 object-fit-cover rounded rounded-sm' src={teamImage} alt="Nayem"/>
-                            <div className="hover-layer">
-                                <div className="text">
-                                    <h5 className=''>Nayem Ahmed</h5>
-                                    <p className='text-info'>Web Developer</p>
-                                    <p className='text-color'>1 Year experiance in web development</p>
-                                </div>
-                            </div>
-                        </div>
+                        
+
+                        {
+                            data.map((item, index) => {
+                                return (
+                                    <div key={index} className="team-card ratio ratio-1x1 bg-warning rounded rounded-sm">
+                                        <img className='w-100 object-fit-cover rounded rounded-sm' src={ item.image } alt="Nayem"/>
+                                        <div className="hover-layer">
+                                            <div className="text">
+                                                <h5 className=''> {item.name} </h5>
+                                                <p className='text-info'> {item.position} </p>
+                                                <p className='text-color'> {item.experience} </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                )
+                            })
+                        }
+                        
 
                        
                     </div>
