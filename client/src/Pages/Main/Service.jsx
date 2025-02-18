@@ -1,11 +1,24 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import Layout from '../../Layout/Layout';
 import ServiceCard from '../../Components/Main/ServiceCard';
+import { ApiRequest } from '../../ApiRequest/Api';
 
 
 
 const Service = () => {
+    const [ service, setService] = useState([]);
+
+    useEffect(() => {
+        (async () => {
+            const result = await ApiRequest("GET", "/read-service");
+            setService(result.data);
+        })()
+    }, [])
+
+ 
+
+
     return (
         <Layout>
             <section>
@@ -15,10 +28,12 @@ const Service = () => {
                             <h1 className='h1_color fw-bold text-center'>Our services</h1>
 
                             <div className='pt-5  d-flex flex-wrap gap-4 justify-content-center align-items-center'>
-                                <ServiceCard />
-                                <ServiceCard />
-                                <ServiceCard />
-                                <ServiceCard />
+                                
+                                 {
+                                    service.map((item, index) => {
+                                        return <ServiceCard key={index} data={item} />;
+                                    })
+                                 }
                             </div>
                         </div>
                     </div>
