@@ -13,6 +13,7 @@ import DashTeam from './Pages/Dashboard/DashTeam';
 import DashHome from './Pages/Dashboard/DashHome';
 import Update from './Pages/Dashboard/Update';
 import Login from './Pages/Dashboard/Login';
+import PrivateRoute from './PrivateRoute/PrivateRoute';
 
 
 
@@ -31,7 +32,7 @@ import Login from './Pages/Dashboard/Login';
           <Route path="/blog-details" element={<BlogDetails />} />
 
           {/* Dashboard Routing */}
-          <Route path="/dashboard" element={<DashHome />} />
+          <Route path="/dashboard" element={<PrivateRoute><DashHome /></PrivateRoute>}  />
           <Route path="/dashboard/blogs" element={<DashBlogs />} />
           <Route path="/dashboard/teams" element={<DashTeam />} />
           <Route path="/dashboard/services" element={<DashService />} />
