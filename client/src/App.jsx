@@ -12,6 +12,7 @@ import DashBlogs from './Pages/Dashboard/DashBlogs';
 import DashTeam from './Pages/Dashboard/DashTeam';
 import DashHome from './Pages/Dashboard/DashHome';
 import Update from './Pages/Dashboard/Update';
+import Login from './Pages/Dashboard/Login';
 
 
 
@@ -35,6 +36,7 @@ import Update from './Pages/Dashboard/Update';
           <Route path="/dashboard/teams" element={<DashTeam />} />
           <Route path="/dashboard/services" element={<DashService />} />
           <Route path="/dashboard/update" element={<Update />} />
+          <Route path="/login" element={<Login />} />
 
         </Routes>
       </BrowserRouter>
