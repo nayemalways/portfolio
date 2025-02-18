@@ -1,16 +1,18 @@
 import axios from "axios";
+import Cookies from 'js-cookie';
 
 
 
 export const ApiRequest = async (method, EndPoint, postBody) => {
     try {
         const basUrl = `http://localhost:3000/v1`;
+        const token = Cookies.get('token');
         const config = {
             method: method,
             url: `${basUrl}${EndPoint}`,
             headers: {
                 "Content-Type": "application/json",
-                "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImV4YW1wbGVAZ21haWwuY29tIiwiVXNlcl9pZCI6IjY3YWI0NTRiZTc2ZTE4Njg1M2VkN2ZkYiIsImlhdCI6MTczOTcyMzI1OCwiZXhwIjoxNzQyMzE1MjU4fQ.vronbtjXTVzTq_US7QiX_bQ2CcRNAK0PHcvWIxFTHbw"
+                "token": token
             },
             withCredentials: true
         }
