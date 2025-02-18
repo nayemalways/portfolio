@@ -26,7 +26,7 @@ const DashBlogs = () => {
 
                 <div className="container">
                     <div className="row d-flex justify-content-center align-content-center h-auto py-5">
-                        <div className="col-md-10 bg-dark p-5 border border-secondary rounded rounded-4">
+                        <div className="col-lg-8 col-md-8 col-10 bg-dark py-5 px-3 border border-secondary rounded rounded-4">
                             <h2 className='color text-center mb-5'>Add Blogs</h2>
 
                             <DashBlogForm loader={loader}  />
