@@ -6,7 +6,7 @@
 
 
 
-/* Main component style  */
+/* Dashboard Sidebar component style  */
 .sidebar {
     max-width: 300px;
     .dashboard-logo {
@@ -42,9 +42,6 @@
 
 
 @media screen and (max-width: 670px) {
-    div {
-        padding: 0 !important;
-
             .sidebar {
                 .dashboard-logo {
                         p {
@@ -67,8 +64,10 @@
                         }
                 }   
             }
-    }
+     
 }
+
+ 
 
 @media screen and (max-width: 400px) {
     .dashboard-logo {
