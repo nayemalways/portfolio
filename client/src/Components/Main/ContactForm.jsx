@@ -9,7 +9,7 @@ const ContactForm = () => {
         
                         <div className="col-md-6 text-start bg-dark p-5 rounded rounded-4">
                             <h2 className='h1_color fw-bold text-center'>Get in touch</h2>
-                            <form id='form' action="">
+                            <form id='form' action="https://formspree.io/f/movjyqae" method='POST'>
                                 <div className='pt-3'>
                                     <input className='form-control text-white' id='name' name='name' type="text" placeholder='Name..'/>
                                 </div>                            
