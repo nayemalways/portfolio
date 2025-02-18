@@ -29,6 +29,20 @@ export const readBlogService = async () => {
     }
 }
 
+// Blog Details
+export const blogDetailsService = async (req) => {
+    try {
+
+        const blogId = req.params['blogId'];
+        const data = await BlogModel.find({_id: blogId});
+        return {status: 'success', data: data };
+        
+    }catch(e) {
+        console.log(e.toString());
+        return {status: "error", message: "Internal server error"}
+    }
+}
+
 
 // Update Blog
 export const updateBlogService = async (req) => {

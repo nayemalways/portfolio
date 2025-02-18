@@ -20,6 +20,7 @@ router.post('/login', userController.Login);
 router.post('/create-blog', userAuthentication, blogController.createBlog);
 router.post('/update-blog/:blogId', userAuthentication, blogController.updateBlog);
 router.get('/read-blog', blogController.readBlog);
+router.get('/blog-details/:blogId', blogController.blogDetails);
 router.get('/delete-blog/:blogId', userAuthentication, blogController.deleteBlog);
 
 
