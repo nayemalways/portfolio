@@ -8,3 +8,30 @@
 }
 
  
+
+/* ------------Blog Details Page---------- */
+.blog-card {
+    .blog-body {
+        span {
+            font-size: 13px;
+        }
+        p {
+            text-align: justify;
+        }
+    }
+}
+
+.blog_title {
+    font-size: clamp(18px, 4vw, 30px);
+}
+
+.blog_desc {
+    font-size: clamp(13px, 2vw, 16px);
+}
+
+
+@media screen and (max-width: 768px) {
+    .blog-card {
+        min-width: 90%;
+    }
+}

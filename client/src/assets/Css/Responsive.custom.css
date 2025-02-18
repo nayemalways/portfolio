@@ -1,20 +1,22 @@
 
 /* Blog section */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .blog-section {
-        margin-top: 4rem;
-         
-    }
-
-    .team-section {
-        margin-top: 10rem;
+        margin-top: 14rem; 
     }
 }
 
 
- /* Team section  */
+@media screen and (max-width: 500px) {
+    .blog-section {
+        margin-top: 9rem; 
+    }
+}
+
+
+ /* -----Team section ----------*/
 @media screen and (max-width: 768px) {
     .team-section {
-        margin-top: 18rem;
+        margin-top: 10rem;
     }
 }

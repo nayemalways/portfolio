@@ -14,7 +14,7 @@ const Service = () => {
                         <div className="col-md-12">
                             <h1 className='h1_color fw-bold text-center'>Our services</h1>
 
-                            <div className='pt-5 d-flex flex-wrap gap-4 justify-content-center align-items-center'>
+                            <div className='pt-5  d-flex flex-wrap gap-4 justify-content-center align-items-center'>
                                 <ServiceCard />
                                 <ServiceCard />
                                 <ServiceCard />
