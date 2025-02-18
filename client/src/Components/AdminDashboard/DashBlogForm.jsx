@@ -184,7 +184,7 @@ const DashBlogForm = ({loader}) => {
                         </div>
 
                         <div className='col-12 my-5'>
-                            <div className='text-light rounded rounded-sm' 
+                            <div className='text-dark rounded rounded-sm' 
                                 style={{ width: '100%', minHeight: '15rem', overflow: 'hidden' }}>
                                 <div ref={quillRef} style={{ height: '15rem' }} />
                             </div>
