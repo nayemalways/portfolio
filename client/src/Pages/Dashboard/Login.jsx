@@ -29,7 +29,7 @@ const Login = () => {
             if(status === 'success') {
                 Cookies.set('token', Token , { expires: 30 }); // Set cookie
                 toast.success(message);
-                navigate('/')
+                navigate('/dashboard')
             }else {
                 toast.error(message);
             }
