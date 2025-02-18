@@ -17,7 +17,7 @@ export const ApiRequest = async (method, EndPoint, postBody) => {
             withCredentials: true
         }
 
-        // If request not GET and DELETE the postBody will included as data in config
+        // If http request is not GET or DELETE the postBody will included as data in config
         if(method !== "GET" && method !== "DELETE" && postBody) {
             config.data = postBody
         }
