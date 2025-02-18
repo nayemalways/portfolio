@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import img from '../assets/image/technology.png';
+import img from '../../assets/image/technology.png';
 
 
 const Card = () => {

@@ -1,6 +1,6 @@
 import React from 'react';
-import Layout from '../Layout/Layout';
-import BlogSection from '../Components/BlogSection';
+import Layout from '../../Layout/Layout';
+import BlogSection from '../../Components/Main/BlogSection';
  
 
 const Blog = () => {

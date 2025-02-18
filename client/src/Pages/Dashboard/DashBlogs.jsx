@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
 
-import DashboardLayout from '../../Components/AdminDashboard/DashboardMasterLayout/DashboardLayout';
+import DashboardLayout from '../../Layout/DashboardLayout';
 import DashBlogForm from '../../Components/AdminDashboard/DashBlogForm';
-import Loader from '../../Components/Loader';
+import Loader from '../../Components/Main/Loader';
  
 
 const DashBlogs = () => {

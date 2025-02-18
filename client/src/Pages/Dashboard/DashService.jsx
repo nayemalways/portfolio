@@ -3,10 +3,10 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import toast from 'react-hot-toast';
 
-import DashboardLayout from '../../Components/AdminDashboard/DashboardMasterLayout/DashboardLayout';
+import DashboardLayout from '../../Layout/DashboardLayout.jsx';
 import { cloudinaryImageUpload } from '../../Helper/helper.js';
 import { ApiRequest } from '../../ApiRequest/Api.js';
-import Loader from '../../Components/Loader.jsx';
+import Loader from '../../Components/Main/Loader.jsx';
  
 
 const DashService = () => {

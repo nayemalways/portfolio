@@ -1,12 +1,12 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import Home from './Pages/Home';
-import About from './Pages/About';
-import Blog from './Pages/Blog';
-import Service from './Pages/Service';
-import Contact from './Pages/Contact';
-import BlogDetails from './Pages/BlogDetails';
+import Home from './Pages/Main/Home';
+import About from './Pages/Main/About';
+import Blog from './Pages/Main/Blog';
+import Service from './Pages/Main/Service';
+import Contact from './Pages/Main/Contact';
+import BlogDetails from './Pages/Main/BlogDetails';
 import DashService from './Pages/Dashboard/DashService';
 import DashBlogs from './Pages/Dashboard/DashBlogs';
 import DashTeam from './Pages/Dashboard/DashTeam';

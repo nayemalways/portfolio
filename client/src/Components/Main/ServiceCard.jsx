@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaCircleArrowRight } from "react-icons/fa6";
 
-import iconImage from '../assets/image/ui-ux.png'
+import iconImage from '../../assets/image/ui-ux.png'
 
 
 

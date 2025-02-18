@@ -2,7 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { TypeAnimation } from 'react-type-animation';
 
-import image from '../assets/image/nayem_.png'
+import image from '../../assets/image/nayem_.png'
+// import image from '../assets/image/nayem_.png'
 
 
 

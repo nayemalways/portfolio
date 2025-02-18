@@ -1,5 +1,5 @@
 import React from 'react';
-import DashboardLayout from '../../Components/AdminDashboard/DashboardMasterLayout/DashboardLayout';
+import DashboardLayout from '../../Layout/DashboardLayout';
 
 const Update = () => {
     return (

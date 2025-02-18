@@ -1,6 +1,6 @@
 import React from 'react';
 
-import teamImage from '../assets/image/me.png'
+import teamImage from '../../assets/image/me.png'
 
 
 

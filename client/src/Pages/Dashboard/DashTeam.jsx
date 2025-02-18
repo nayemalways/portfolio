@@ -1,6 +1,6 @@
 import React from 'react';
 
- import DashboardLayout from '../../Components/AdminDashboard/DashboardMasterLayout/DashboardLayout';
+ import DashboardLayout from '../../Layout/DashboardLayout';
 import FormField from '../../Components/AdminDashboard/FormField';
 
 const DashTeam = () => {
