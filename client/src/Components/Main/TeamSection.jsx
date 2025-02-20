@@ -20,7 +20,7 @@ const TeamSection = ({data}) => {
                         {
                             data.map((item, index) => {
                                 return (
-                                    <div key={index} className="team-card ratio ratio-1x1 bg-warning rounded rounded-sm">
+                                    <div key={index} className="team-card ratio ratio-1x1 rounded rounded-sm">
                                         <img className='w-100 object-fit-cover rounded rounded-sm' src={ item.image } alt="Nayem"/>
                                         <div className="hover-layer">
                                             <div className="text">
