@@ -40,26 +40,24 @@ const FormField = () => {
 
 
 
-    // Convert image int Base64 and set inside formik
+    // --------Handle images and upload Cloudinary---------
     const imageHandler = async (e) => {
         try {
             const image = e.target.files[0];
     
             if (image) {
-                 
-                // Upload image to cloud
+
                 const result = await cloudinaryImageUpload(image);
-                if(result) {
+                if(result) { 
+                    formik.setFieldValue('image', result); // Set image url to formik field
                     toast.success('Image uploaded');
                 }else{
-                    toast.error("Image couldn't uplod");
+                    toast.error("Image couldn't upload");
                 }
                 
-                // set image url to formik
-                formik.setFieldValue('image', result);
-    
-                // cleared the field
+                //----cleared the field------
                 e.target.value = '';
+
             }
         } catch (e) {
             console.log(e);
