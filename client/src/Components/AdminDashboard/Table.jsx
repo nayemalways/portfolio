@@ -3,11 +3,22 @@ import { Link } from 'react-router-dom';
 
 import { FaEdit } from "react-icons/fa";
 import { MdDeleteSweep } from "react-icons/md";
+import { DeleteAlert } from '../../Helper/helper';
+import { ApiRequest } from './../../ApiRequest/Api';
 
 
 
-const Table = ({title, data}) => {
+const Table = ({section, title, data}) => {
      
+     const deleteHandle = async (section, id) => {
+        const confirmDelete = await DeleteAlert();
+        if(confirmDelete) {
+            const result = await ApiRequest('GET', `/delete-${section}/${id}`);
+            if(result) {
+                // window.location.reload();
+            }
+        }
+     }
 
     return (
         <>
@@ -37,10 +48,10 @@ const Table = ({title, data}) => {
                                                 {item.title || item.name} 
                                             </td>
                                             <td className='align-middle'>
-                                                <button className='btn btn-danger'><MdDeleteSweep /></button>
+                                                <button onClick={() => deleteHandle(section, item['_id'])} className='btn btn-danger'><MdDeleteSweep /></button>
                                             </td>
                                             <td className='align-middle'>
-                                                <Link to={`/dashboard/update/${item._id}`} className='d-block btn btn-success'>
+                                                <Link to={`/dashboard/update-${section}/${item._id}`} className='d-block btn btn-success'>
                                                     <FaEdit />
                                                 </Link>
                                             </td>
