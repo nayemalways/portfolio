@@ -10,7 +10,7 @@ import Loader from '../../Components/Main/Loader';
 
 const DashHome = () => {
 
-    const [skeleton, setSkeleton] = useState(true);
+    const [loading, setLoading] = useState(true);
 
 
     // Manage State
@@ -30,10 +30,32 @@ const DashHome = () => {
             setService(services.data);
             setTeam(teams.data);
 
-            // Turn off skeleton loading
-            setSkeleton(false);
+            // Turn off loading
+            setLoading(false);
         })()
     }, [])
+
+
+    /* 
+        ***Note: When delete any item from Table.jsx the Data will update by recall-API. 
+        "updateData" function called inside Table.jsx
+    */
+
+    /* 
+    ***Important: "section" is my props value for recognization specifik table.
+      And based on section All the API has called in Table.jsx 
+    */
+    const updateData = (data, section) => {
+        // Update state when Data has changed in Table.jsx 
+       if(section === "member") {
+        setTeam(data);
+       }else if (section === "service") {
+        setService(data);
+       }else if (section === "blog") {
+        setBlog(data);
+       }
+
+    }
 
 
     return (
@@ -44,19 +66,19 @@ const DashHome = () => {
 
                         {/* Team Section Table  */} 
                         {
-                            skeleton ? ( <Loader/>):( <Table data={team} section='member' title='Team overview'/> )
+                            loading ? ( <Loader/>):( <Table updatePage={updateData} data={team} section='member' title='Team overview'/> )
                         }
 
                         {/* Service Section Table  */}
                        
                         {
-                            skeleton ? (  <Loader/>):( <Table data={service} section='service' title='Service overview'/> )
+                            loading ? (  <Loader/>):( <Table  updatePage={updateData} data={service} section='service' title='Service overview'/> )
                         }
 
 
                         {/* Blog Section Table  */}
                         {
-                            skeleton ? ( <Loader/>):(  <Table  data={blog} section='blog' title='Blog overview'/> )
+                            loading ? ( <Loader/>):(  <Table  updatePage={updateData}  data={blog} section='blog' title='Blog overview'/> )
                         }
                         
                          

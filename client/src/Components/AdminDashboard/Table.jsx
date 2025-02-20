@@ -8,16 +8,29 @@ import { ApiRequest } from './../../ApiRequest/Api';
 
 
 
-const Table = ({section, title, data}) => {
+const Table = ({updatePage, section, title, data}) => {
      
+    // => Handle items delete
      const deleteHandle = async (section, id) => {
-        const confirmDelete = await DeleteAlert();
-        if(confirmDelete) {
-            const result = await ApiRequest('GET', `/delete-${section}/${id}`);
-            if(result) {
-                // window.location.reload();
+            // Sweet alert confirm => true/undefined
+            const confirmDelete = await DeleteAlert();
+            // => If confirmDelete is true than Call delete API
+            if(confirmDelete) {
+
+                // => Delete API Called based on "section". 
+                // => Section is a props value for recognization specifik table.
+                // => "section" come from "DashHome.jsx"; 
+                // => And it will dynamically called for delete items. 
+                const result = await ApiRequest('GET', `/delete-${section}/${id}`); // Delete API
+
+                // => Call API again for update data when Data has deleted
+                if(result) {
+                    const updateResult = await ApiRequest('GET', `/read-${section}`);
+                    updatePage(updateResult.data, section);
+                }
+                
             }
-        }
+
      }
 
     return (
