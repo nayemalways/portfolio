@@ -41,7 +41,7 @@ const BlogDetails = () => {
                 <div className="container py-5">
                     <div className="row d-flex justify-content-center">
                         <div className="col-md-12 d-flex justify-content-center">
-                            <div  className='blog-card w-75 bg-dark p-3 rounded rounded-4'>
+                            <div  className='blog-card d-flex flex-column w-75 bg-dark p-3 rounded rounded-4'>
                                 <img className='img-fluid rounded rounded-4' src={data?.image} alt="" />
                                 <div className="blog-body text-start pt-4">
                                     <h1 className='blog_title text-white'> { data?.title } </h1>
