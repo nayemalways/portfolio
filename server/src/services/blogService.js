@@ -34,7 +34,7 @@ export const blogDetailsService = async (req) => {
     try {
 
         const blogId = req.params['blogId'];
-        const data = await BlogModel.find({_id: blogId});
+        const data = await BlogModel.findOne({_id: blogId});
         return {status: 'success', data: data };
         
     }catch(e) {
