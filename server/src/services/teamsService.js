@@ -28,6 +28,7 @@ export const readMemberService = async () => {
     }
 }
 
+// Read singel member by id
 export const readMemberByIDService = async (req) => {
     try {
 

@@ -34,6 +34,21 @@ export const serviceRead = async (req) => {
     }
 }
 
+
+// Read singel service by id
+export const singelService = async (req) => {
+    try {
+
+        const serviceId = req.params['serviceId'];
+        const data = await ServiceModel.findOne({_id: serviceId});
+        return {status: "success",  data: data};
+
+    }catch(e) {
+        console.log(e.toString());
+        return {status: "error", message: "Internal server error"};
+    }
+}
+
 // Service update
 export const serviceUpdate = async (req) => {
     try {

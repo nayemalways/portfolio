@@ -1,4 +1,4 @@
-import { serviceCreate, serviceDelete, serviceRead, serviceUpdate } from "../services/ourService.js";
+import { serviceCreate, serviceDelete, serviceRead, serviceUpdate, singelService } from "../services/ourService.js";
 
 
 // Service create controller
@@ -10,6 +10,12 @@ export const createService = async (req, res) => {
 // Service read controller
 export const readService = async (req, res) => {
     const result = await serviceRead(req);
+    res.json(result);
+}
+
+// Service read controller
+export const singelServiceByID = async (req, res) => {
+    const result = await singelService(req);
     res.json(result);
 }
 
