@@ -44,19 +44,19 @@ const DashHome = () => {
 
                         {/* Team Section Table  */} 
                         {
-                            skeleton ? ( <Loader/>):( <Table data={team} title='Team overview'/> )
+                            skeleton ? ( <Loader/>):( <Table data={team} section='member' title='Team overview'/> )
                         }
 
                         {/* Service Section Table  */}
                        
                         {
-                            skeleton ? (  <Loader/>):( <Table data={service} title='Service overview'/> )
+                            skeleton ? (  <Loader/>):( <Table data={service} section='service' title='Service overview'/> )
                         }
 
 
                         {/* Blog Section Table  */}
                         {
-                            skeleton ? ( <Loader/>):(  <Table  data={blog} title='Blog overview'/> )
+                            skeleton ? ( <Loader/>):(  <Table  data={blog} section='blog' title='Blog overview'/> )
                         }
                         
                          
