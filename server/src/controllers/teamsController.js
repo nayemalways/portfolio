@@ -26,7 +26,7 @@ export const readMemberByID = async (req, res) => {
 // Update member controller
 export const updateMember = async (req, res) => {
     const result = await updateMemberService(req);
-    res.json({result});
+    res.json(result);
 }
 
 // Delete member controller
