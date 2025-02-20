@@ -55,7 +55,7 @@ const FormField = () => {
                     toast.error("Image couldn't upload");
                 }
                 
-                //----cleared the field------
+                // ----cleared the field----
                 e.target.value = '';
 
             }
