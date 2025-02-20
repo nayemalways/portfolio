@@ -28,6 +28,19 @@ export const readMemberService = async () => {
     }
 }
 
+export const readMemberByIDService = async (req) => {
+    try {
+
+        const memberId = req.params['memberId'];
+        const data = await TeamsModel.findOne({_id: memberId});
+        return {status: "success", data: data};
+
+    }catch(e) {
+        console.log(e.toString());
+        return {status: "error", message: "Internal server error"};
+    }
+}
+
 
 // Update single member
 export const updateMemberService = async (req) => {

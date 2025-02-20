@@ -1,4 +1,4 @@
-import { createMemberService, deleteMemberService, readMemberService, updateMemberService } from "../services/teamsService.js"
+import { createMemberService, deleteMemberService, readMemberService, updateMemberService, readMemberByIDService } from "../services/teamsService.js"
 
 
 
@@ -12,6 +12,13 @@ export const createMember = async (req, res) => {
 // Read member controller
 export const readMember = async (req, res) => {
     const result = await readMemberService();
+    res.json(result);
+}
+
+
+// Read singel member by id
+export const readMemberByID = async (req, res) => {
+    const result = await readMemberByIDService(req);
     res.json(result);
 }
 

@@ -33,6 +33,7 @@ router.get('/delete-service/:serviceId', userAuthentication, ourServiceControlle
 // Team member related API
 router.post('/create-member', userAuthentication, teamController.createMember);
 router.get('/read-member',   teamController.readMember);
+router.get('/read-member/:memberId', userAuthentication,  teamController.readMemberByID);
 router.post('/update-member/:memberId', userAuthentication, teamController.updateMember);
 router.get('/delete-member/:memberId', userAuthentication, teamController.deleteMember);
 
