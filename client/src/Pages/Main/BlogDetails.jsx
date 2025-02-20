@@ -22,7 +22,7 @@ const BlogDetails = () => {
 
 
    // Check if data is available
-    const data = blog[0];
+    const data = blog ;
 
     // MongoDB time formatting
     useEffect(() => {
