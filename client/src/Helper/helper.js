@@ -1,5 +1,5 @@
 import axios from "axios";
-
+import Swal from 'sweetalert2'
 
 
 // Cloudinary set up
@@ -21,3 +21,31 @@ export const cloudinaryImageUpload = async (image) => {
         console.error(e);
     }
 }
+
+
+// Sweet Alert Delete confirm 
+export const DeleteAlert = async () => {
+   return  Swal.fire({
+        title: "Are you sure?",
+        text: "You won't be able to revert this!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Yes, delete it!"
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire({
+            title: "Deleted!",
+            text: "Your file has been deleted.",
+            icon: "success"
+          });
+
+          return true;
+          
+        }
+      });
+
+       
+}
+
