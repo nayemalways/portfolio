@@ -15,8 +15,8 @@ const Sidebar = () => {
     const {pathname} = useLocation();
 
     return (
-        <div className="sidebar vh-100 w-100  border-end border-secondary">
-                <div className='h-100 overflow-hidden '>
+        <div className="sidebar vh-100 w-100 ">
+                <div className='h-100 overflow-hidden bg-dark position-fixed pe-3  border-end border-secondary'>
                     <Link to='/dashboard' className='text-decoration-none'>
                         <h4 className='dashboard-logo fw-bolder mt-4 ps-4'>
                             <MdDashboard className='d-none dashboard-icon h1' /> 

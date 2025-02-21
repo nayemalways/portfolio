@@ -73,6 +73,12 @@
     .dashboard-logo {
         margin-right: 6px;
     }
+
+    .sidebar {
+        div {
+            padding-right: 0 !important;
+        }
+    }
 }
 
 
