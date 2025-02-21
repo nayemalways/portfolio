@@ -14,6 +14,7 @@ import DashHome from './Pages/Dashboard/DashHome';
 import Login from './Pages/Dashboard/Login';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
 import UpdateTeam from './Pages/Dashboard/UpdateTeam';
+import UpdateService from './Pages/Dashboard/UpdateService';
 
 
 
@@ -37,6 +38,7 @@ import UpdateTeam from './Pages/Dashboard/UpdateTeam';
           <Route path="/dashboard/teams" element={<DashTeam />} />
           <Route path="/dashboard/services" element={<DashService />} />
           <Route path="/dashboard/update-member/:memberId" element={<UpdateTeam />} />
+          <Route path="/dashboard/update-service/:serviceId" element={<UpdateService />} />
           <Route path="/login" element={<Login />} />
 
         </Routes>
