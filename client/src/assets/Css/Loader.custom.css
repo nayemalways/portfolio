@@ -1,5 +1,18 @@
-/* custom utility css  */
+   /* -----------------------Bootstrap Loader -------------------- */
+   .bootstrap-loader {
+    width: 100%;
+    height: 100vh;
+    background: rgb(0, 0, 0);
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
+  
+/* -----------------------Dashboard Loader -------------------- */
 #loader {
     position: fixed;
     width: 100%;
