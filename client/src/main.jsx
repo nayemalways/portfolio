@@ -6,6 +6,8 @@ import { Toaster } from 'react-hot-toast';
 import App from './App'
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'animate.css';
+
 import './index.css';
 import '../src/assets/Css/Nabbar.custom.css';
 import '../src/assets/Css/Hero.custom.css';
