@@ -5,14 +5,16 @@ import hpp from 'hpp';
 import cookieParser from "cookie-parser";
 import rateLimit from "express-rate-limit";
 import mongoose from "mongoose";
+import path from "path";
 import router from './src/routes/api.js'
 
 import {DATABASE_URL, USER_NAME, PASSWORD, PORT, URL_ENCODE, MAX_JSON_SIZE, MAX_REQUEST_TIME, MAX_REQUEST_NUMBER, WEB_CACHE} from  './src/config/config.js';
 
 // Express App
 const app = express();
+const _dirname = path.resolve();
 
-// Global Applications middleware
+// Global Applications Middleware
 app.use(cors({ credentials: true, origin: "http://localhost:5173" }));
 app.use(helmet());
 app.use(hpp());
@@ -43,8 +45,24 @@ mongoose.connect( DATABASE_URL,options)
 // Application storage folder
 app.use(express.static('storage'));
 
+// Content CSP added
+app.use((req, res, next) => {
+    res.setHeader(
+      "Content-Security-Policy",
+      "img-src 'self' data: https://res.cloudinary.com https://roar.media;"
+    );
+    next();
+  });
 
+  
+// Application Route
 app.use('/v1', router);
+
+
+app.use(express.static(path.join(_dirname, "/client/dist")));
+app.get("*", (_, res) => {
+    res.sendFile(path.resolve(_dirname, "client", "dist", "index.html"));
+})
 
 
 
