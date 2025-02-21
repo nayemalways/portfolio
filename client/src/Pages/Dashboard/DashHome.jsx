@@ -10,14 +10,16 @@ import Loader from '../../Components/Main/Loader';
 
 const DashHome = () => {
 
-    const [loading, setLoading] = useState(true);
+    
 
 
     // Manage State
     const [blog, setBlog] = useState([]);
     const [service, setService] = useState([]);
     const [team, setTeam] = useState([]);
+    const [loading, setLoading] = useState(true);
 
+    
     // Call API
     useEffect(() => {
         (async () => {
@@ -37,13 +39,13 @@ const DashHome = () => {
 
 
     /* 
-        ***Note: When delete any item from Table.jsx the Data will update by recall-API. 
+        ***Note: 
+        When delete any item from Table.jsx the Data will update by recall-API. 
         "updateData" function called inside Table.jsx
-    */
 
-    /* 
-    ***Important: "section" is my props value for recognization specifik table.
-      And based on section All the API has called in Table.jsx 
+        ***Important: 
+        "section" is my props value for recognization specifik table.
+        And based on section All the API has called in Table.jsx 
     */
     const updateData = (data, section) => {
         // Update state when Data has changed in Table.jsx 
