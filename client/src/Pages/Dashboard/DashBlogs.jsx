@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 import DashboardLayout from '../../Layout/DashboardLayout';
 import DashBlogForm from '../../Components/AdminDashboard/DashBlogForm';
-import Loader from '../../Components/Main/Loader';
+import Loader from '../../Components/Main/LoaderDashboard';
  
 
 const DashBlogs = () => {

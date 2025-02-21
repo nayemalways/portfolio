@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import DashboardLayout from '../../Layout/DashboardLayout';
 import Table from '../../Components/AdminDashboard/Table';
 import { ApiRequest } from '../../ApiRequest/Api';
-import Loader from '../../Components/Main/Loader';
+import Loader from '../../Components/Main/LoaderDashboard';
 
 
 
@@ -19,7 +19,7 @@ const DashHome = () => {
     const [team, setTeam] = useState([]);
     const [loading, setLoading] = useState(true);
 
-    
+
     // Call API
     useEffect(() => {
         (async () => {

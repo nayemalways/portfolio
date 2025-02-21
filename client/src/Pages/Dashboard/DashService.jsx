@@ -6,7 +6,7 @@ import toast from 'react-hot-toast';
 import DashboardLayout from '../../Layout/DashboardLayout.jsx';
 import { cloudinaryImageUpload } from '../../Helper/helper.js';
 import { ApiRequest } from '../../ApiRequest/Api.js';
-import Loader from '../../Components/Main/Loader.jsx';
+import Loader from '../../Components/Main/LoaderDashboard.jsx';
  
 
 const DashService = () => {

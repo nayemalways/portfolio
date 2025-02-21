@@ -1,12 +1,8 @@
 import React  from 'react';
- 
 import Card from './Card';
-import { ApiRequest } from '../../ApiRequest/Api';
-
-
 
 const BlogSection = ({data}) => {
-    return (
+     return (
         <>
            <section className='blog-section py-5'>
                 <div className="container">
@@ -20,9 +16,7 @@ const BlogSection = ({data}) => {
                         <div className="col-md-12 pt-5 d-flex justify-content-center align-items-center gap-4 flex-wrap">
                             
                         {
-                            data.map((item, index) =>{
-                                return <Card key={index}  data={item}/>
-                            })
+                            data.map((item, index) => <Card key={index}  data={item}/> )
                         }
                              
                         </div>
