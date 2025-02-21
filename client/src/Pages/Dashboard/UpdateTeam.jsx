@@ -114,7 +114,7 @@ const UpdateTeam = () => {
                 <div className="container">
                     <div className="row d-flex justify-content-center align-content-center h-auto py-5 ">
                         <div className="col-lg-8 col-md-10 col-12 bg-dark border border-secondary rounded rounded-4 py-4">
-                            <h2 className='color text-center mb-5'>Add Team Member</h2>
+                            <h2 className='color text-center mb-5'>Update Team Member</h2>
 
 
                             <form id='form' className='w-100' onSubmit={handleForm} >
@@ -185,7 +185,7 @@ const UpdateTeam = () => {
                                         </div>
 
                                         <div className="col-md-12 mt-3">
-                                            <button className='w-100 fw-bold btn color btn-secondary' type='submit'>Send</button>
+                                            <button className='w-100 fw-bold btn color btn-secondary' type='submit'>Update</button>
                                         </div>
 
                                         
