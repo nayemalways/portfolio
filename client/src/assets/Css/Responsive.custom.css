@@ -13,6 +13,13 @@
     }
 }
 
+@media screen and (max-width: 768px) {
+    .blog-card {
+        min-width: 90%;
+    }
+}
+
+
 
  /* -----Team section ----------*/
 @media screen and (max-width: 768px) {

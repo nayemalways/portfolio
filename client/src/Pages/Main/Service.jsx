@@ -34,7 +34,7 @@ const Service = () => {
                     loading ? (<BootstrapLoader />):(
                         <div className="row h-100 d-flex justify-content-center  ">
                         <div className="col-md-12">
-                            <h1 className='h1_color fw-bold text-center'>Our services</h1>
+                            <h1 data-aos="fade-right" className='h1_color fw-bold text-center'>Our services</h1>
 
                             <div className='pt-5  d-flex flex-wrap gap-4 justify-content-center align-items-center'>
                                 

@@ -1,17 +1,11 @@
-
+ 
+/* ----------Blog Card styleing --------- */
 .card-hover {
     transition: all .3s linear;
     overflow: hidden;
 }
 .card-hover:hover {
     transform: scale(1.02);
-}
-
-.line-spacing * {
-    white-space: normal; 
-    word-wrap: break-word;  
-    background-color: transparent !important; 
-    color: #b5adad !important;
 }
 
 .line-clamp {
@@ -23,20 +17,10 @@
     text-overflow: ellipsis;
 }
 
-.inside-image {
-    p {
-        span {
-            font-size: clamp(13px, 2vw, 17px) !important;
-        }
-        img {
-            width: 100%;
-            object-fit: contain;
-        }
-    }
-}
 
 
-/* ------------Blog Details Page---------- */
+
+/* ------------Blog Details Page Styling---------- */
 .blog-card {
     .blog-body {
         span {
@@ -52,11 +36,22 @@
     font-size: clamp(18px, 4vw, 35px);
 }
 
-
-
-
-@media screen and (max-width: 768px) {
-    .blog-card {
-        min-width: 90%;
+.inside-image {
+    p {
+        span {
+            font-size: clamp(13px, 2vw, 17px) !important;
+        }
+        img {
+            width: 100%;
+            object-fit: contain;
+        }
     }
 }
+
+.line-spacing * {
+    white-space: normal; 
+    word-wrap: break-word;  
+    background-color: transparent !important; 
+    color: #b5adad !important;
+}
+

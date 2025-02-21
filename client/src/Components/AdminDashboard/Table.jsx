@@ -36,9 +36,9 @@ const Table = ({updatePage, section, title, data}) => {
     return (
         <>
             <div className="col-12 col-md-12 col-lg-12 table-style">
-                <h3 className='color'>{title}</h3>
+                <h3 data-aos="fade-up-left" className='color'>{title}</h3>
                 <div className='table-responsive p-sm-3'>
-                    <table className='table table-striped'>
+                    <table data-aos="fade-in" className='table table-striped'>
                         <thead className='text-center'>
                             <tr>
                                 <th>No:</th>
@@ -52,7 +52,7 @@ const Table = ({updatePage, section, title, data}) => {
                             {
                                 data.map((item, index) => {
                                     return (
-                                        <tr key={index} className='text-center'>
+                                        <tr  key={index} className='text-center'>
                                             <td className='align-middle'>{index + 1}</td>
                                             <td className='align-middle'>
                                                 <img className='table-img rounded rounded-2 img-fluid' src={item.image} alt="" />

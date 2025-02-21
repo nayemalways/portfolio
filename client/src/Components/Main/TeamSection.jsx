@@ -5,12 +5,12 @@ const TeamSection = ({data}) => {
  
     return (
         <>
-          <section className='team-section '>
+          <section className='team-section overflow-x-hidden'>
             <div className="container vh-100 pt-5">
                 <div className="row">
                     <div className="col-md-12 text-center">
-                        <div>
-                            <h1 className='h1_color text-center mb-0 fw-bold'>Meet Our Team</h1>
+                        <div className=''>
+                            <h1 data-aos="fade-right" className='h1_color text-center mb-0 fw-bold '>Meet Our Team</h1>
                         </div>
                     </div>
                     <div className="col-md-12 d-flex gap-4 flex-wrap justify-content-center pt-5">
@@ -20,7 +20,7 @@ const TeamSection = ({data}) => {
                         {
                             data.map((item, index) => {
                                 return (
-                                    <div key={index} className="team-card ratio ratio-1x1 rounded rounded-sm">
+                                    <div key={index} data-aos="fade-up" className="team-card ratio ratio-1x1 rounded rounded-sm">
                                         <img className='w-100 object-fit-cover rounded rounded-sm' src={ item.image } alt="Nayem"/>
                                         <div className="hover-layer">
                                             <div className="text">
