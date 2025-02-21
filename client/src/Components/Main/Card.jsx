@@ -8,7 +8,7 @@ const Card = ({ data }) => {
  
     return (
         <>
-            <Link to={`/blog-details/${data["_id"]}`} className='text-decoration-none animate__animated   animate__fadeInUp'>
+            <Link data-aos="fade-up" to={`/blog-details/${data["_id"]}`} className='text-decoration-none'>
                 <div style={{minWidth: '15rem', maxWidth: '17rem' , height: "auto"}} className="card-hover rounded rounded-3 border     border-sm border-secondary">
                     <img className='w-100 rounded rounded-3' src={  data.image } alt="" />
                     <div className="p-2  text-start">

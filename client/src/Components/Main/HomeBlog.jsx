@@ -9,9 +9,9 @@ const HomeBlog = ({data}) => {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-12 d-flex justify-content-center align-items-center text-center">
-                            <div>
-                                <h2 className='h1_color fw-bold'>Latest blog</h2>
-                                <p className='text-secondary h5'>Be updated with latest technology in the world.</p>
+                            <div className='overflow-x-hidden'>
+                                <h2 data-aos="fade-left" className='h1_color fw-bold '>Latest blog</h2>
+                                <p data-aos="fade-right" className='text-secondary h5'>Be updated with latest technology in the world.</p>
                             </div>
                         </div>
                         <div className="col-md-12 pt-5 d-flex justify-content-center align-items-center gap-4 flex-wrap">
