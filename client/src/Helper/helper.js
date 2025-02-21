@@ -10,7 +10,7 @@ export const cloudinaryImageUpload = async (image) => {
 
     try {
 
-        let cloudName = import.meta.env.VITE_CLOUDINARY_NAME;
+        let cloudName = "dhk0b7qs5";
         let api = `https://api.cloudinary.com/v1_1/${cloudName}/image/upload`;
 
         const response = await axios.post(api, data);
