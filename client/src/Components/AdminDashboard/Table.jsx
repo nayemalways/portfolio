@@ -35,9 +35,9 @@ const Table = ({updatePage, section, title, data}) => {
 
     return (
         <>
-            <div className="col-12 col-md-12 col-lg-12 table-style">
+            <div className="col-12 col-md-12 col-lg-12 table-style overflow-x-hidden">
                 <h3 data-aos="fade-up-left" className='color'>{title}</h3>
-                <div className='table-responsive p-sm-3'>
+                <div className='table-responsive  p-sm-3'>
                     <table data-aos="fade-in" className='table table-striped'>
                         <thead className='text-center'>
                             <tr>
