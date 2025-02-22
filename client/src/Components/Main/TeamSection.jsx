@@ -5,7 +5,7 @@ const TeamSection = ({data}) => {
  
     return (
         <>
-          <section className='team-section overflow-x-hidden'>
+          <section className='team-section'>
             <div className="container vh-100 pt-5">
                 <div className="row">
                     <div className="col-md-12 text-center">
