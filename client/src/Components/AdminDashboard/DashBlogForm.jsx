@@ -325,7 +325,7 @@ const DashBlogForm = ({ loader }) => {
                                 <ReactQuill
                                     value={formik.values.description}
                                     onChange={(content) => formik.setFieldValue('description', content)}
-                                    style={{ height: '15rem' }}
+                                    style={{ height: '25rem' }}
                                 />
                             </div>
                             {formik.touched.description && formik.errors.description && <span style={{ color: "red" }}>{formik.errors.description}</span>}
