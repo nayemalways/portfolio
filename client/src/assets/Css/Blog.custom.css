@@ -33,16 +33,23 @@
 }
 
 .blog_title {
-    font-size: clamp(18px, 4vw, 35px);
+    font-size: clamp(27px, 5vw, 40px);
 }
 
-.inside-image {
+.text-body {
+    h2 {
+        img {
+            width: 100% ;
+            object-fit: contain;
+        }
+    }
     p {
         span {
-            font-size: clamp(13px, 2vw, 17px) !important;
+            font-size: clamp(15px, 3vw, 17px) !important;
         }
+        
         img {
-            width: 100%;
+            max-width: 100% ;
             object-fit: contain;
         }
     }

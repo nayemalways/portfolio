@@ -5,23 +5,29 @@ import { bn } from 'date-fns/locale';
 
 import Layout from '../../Layout/Layout';
 import { ApiRequest } from '../../ApiRequest/Api';
+import BootstrapLoader from '../../Components/Main/BootstrapLoader';
 
 
 
 const BlogDetails = () => {
+
+    // Manage State
     const { blogId } = useParams();
     const [blog, setBlog] = useState([]);
     const [date, setDate] = useState('');
+    const [loading, setLoading] = useState(true);
      
+    // Call API
     useEffect(() => {
         (async () => {
             const result = await ApiRequest('GET', `/blog-details/${blogId}`);
             setBlog(result.data);
+            setLoading(false);
         })()
     }, [])
 
 
-   // Check if data is available
+   // Assign blog as data
     const data = blog ;
 
     // MongoDB time formatting
@@ -38,21 +44,29 @@ const BlogDetails = () => {
     return (
         <Layout>
             <section>
-                <div className="container py-5">
+                <div className="container-fluid py-5">
                     <div className="row d-flex justify-content-center">
                         <div className="col-md-12 d-flex justify-content-center">
-                            <div  className='blog-card d-flex flex-column w-75 bg-dark p-3 rounded rounded-4'>
-                                <img className='img-fluid rounded rounded-4' src={data?.image} alt="" />
-                                <div className="blog-body text-start pt-4">
-                                    <h1 className='blog_title text-white'> { data?.title } </h1>
-                                    <span className='shadow shadow-4 bg-dark text-white d-inline-block py-2 px-3 my-3 rounded rounded-4 shadow shadow-lg'> Published:- {date} </span>
 
-                                    { data?.description && (
-                                        <div  className=' text-start inside-image line-spacing' dangerouslySetInnerHTML={{ __html: data.description }}></div>
-                                    )}
+                            {
+                                loading ? ( <BootstrapLoader /> ) : (
 
-                                </div>
-                            </div>
+                                    <div  className='blog-card d-flex flex-column w-75 bg-dark p-3 rounded rounded-4'>
+                                        <img className='img-fluid rounded rounded-4' src={data?.image} alt="" />
+                                        <div className="blog-body text-start pt-4">
+                                            <h1 className='blog_title text-white'> { data?.title } </h1>
+                                            <span className='shadow shadow-4 bg-dark text-white d-inline-block py-2 px-3 my-3 rounded rounded-4 shadow shadow-lg'> Published:- {date} </span>
+
+                                            { data?.description && (
+                                                <div  className=' text-start text-body line-spacing' dangerouslySetInnerHTML={{ __html: data.description }}></div>
+                                            )}
+
+                                        </div>
+                                    </div>
+
+                                )
+                            }
+                            
                         </div>
                     </div>
                 </div>
