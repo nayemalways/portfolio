@@ -1,5 +1,5 @@
 import React from 'react';
-import image from '../../assets/image/me.png'
+import image from '../../assets/image/nayem_.png'
 
 
 const AboutSection = () => {
@@ -17,7 +17,7 @@ const AboutSection = () => {
                         </p>
                     </div>
                     <div className="col-sm-12 col-md-6 text-center overflow-x-hidden ">
-                        <img data-aos="fade-left" style={{maxWidth: '230px'}}  className='img-fluid rounded rounded-sm shadow shadow-3 max-width' src={image} alt="Photo" />
+                        <img data-aos="fade-left" style={{maxWidth: '230px'}}  className='bg-dark img-fluid rounded rounded-sm shadow shadow-3 max-width' src={image} alt="Photo" />
                     </div>
                 </div>
             </div>

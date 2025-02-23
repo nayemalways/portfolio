@@ -5,7 +5,7 @@ import Cookies from 'js-cookie';
 
 export const ApiRequest = async (method, EndPoint, postBody) => {
     try {
-        const basUrl = `https://nayem-ahmed.onrender.com/v1`;
+        const basUrl = `http://localhost:3000/v1`;
         const token = Cookies.get('token');
         const config = {
             method: method,
