@@ -19,7 +19,7 @@ export const MAX_JSON_SIZE = process.env.MAX_JSON_SIZE;
 export const MAX_REQUEST_TIME = parseFloat(process.env.MAX_REQUEST_TIME);
 export const MAX_REQUEST_NUMBER = parseFloat(process.env.MAX_REQUEST_NUMBER);
 
-export const WEB_CACHE = false;
+export const WEB_CACHE = true;
 
 
 

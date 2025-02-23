@@ -28,6 +28,13 @@ app.use(Limitter);
 
 // Web Cache
 app.set('etag', WEB_CACHE);
+app.use(express.static('public', {
+  maxAge: '1d',  // Cache for 1 day
+  etag: true,    // Enable ETag
+  lastModified: true
+}));
+
+
 
 // MongoDB connection
 const options = {
@@ -45,6 +52,8 @@ mongoose.connect( DATABASE_URL,options)
 // Application storage folder
 app.use(express.static('storage'));
 
+
+
 // Content CSP added
 app.use((req, res, next) => {
     res.setHeader(
@@ -55,8 +64,11 @@ app.use((req, res, next) => {
   });
 
   
+
+
 // Application Route
 app.use('/v1', router);
+
 
 
 app.use(express.static(path.join(_dirname, "/client/dist")));
