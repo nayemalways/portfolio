@@ -43,10 +43,10 @@ const HeroSection = () => {
                                 {/* Social */}
                                 <div className='d-flex gap-4 mt-4'>
                                     <Link to='https://github.com/nayemalways' target='_blank' className='fs-4 text-white'>
-                                        <i class="fa-brands fa-github"></i>
+                                        <i className="fa-brands fa-github"></i>
                                     </Link>
                                     <Link to='https://www.linkedin.com/in/nayemalways/' target='_blank' className='fs-4 text-white '>
-                                        <i class="fa-brands fa-linkedin"></i>
+                                        <i className="fa-brands fa-linkedin"></i>
                                     </Link>
                                 </div>
                             </div>
