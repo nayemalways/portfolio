@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { TypeAnimation } from 'react-type-animation';
 import image from '../../assets/image/nayem_.webp';
-import resume from '../../assets/image/basic.pdf';
+import resume from '../../assets/image/professional_cv.pdf';
 
 
 
