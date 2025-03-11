@@ -6,16 +6,6 @@ Welcome to my portfolio repository! This project showcases my skills and project
 
 Check out my portfolio live at [Portfolio Live](https://nayem-ahmed.onrender.com)
 
-## How to Navigate
-
-### Dashboard Route
-
-To access the dashboard section of my portfolio, follow these steps:
-
-1. Open the live link provided above.
-2. Navigate to the "/dashboard" section in the navigation bar.
-3. Than login with email: example@gmail.com password: 000000
-
 ## Technologies Used
 
 - HTML, CSS, Bootstrap for frontend
