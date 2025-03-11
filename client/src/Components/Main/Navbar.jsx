@@ -33,17 +33,11 @@ const Navbar = () => {
                                         <Link className='text-decoration-none text-secondary h6' to={'/'}>Home</Link>
                                     </li>
                                     <li>
-                                        <Link className='text-decoration-none text-secondary h6' to={'/about'}>About</Link>
+                                        <Link className='text-decoration-none text-secondary h6' to={'/team'}>Team</Link>
                                     </li>
                                     <li>
                                         <Link className='text-decoration-none text-secondary h6' to={'/blog'}>Blog</Link>
-                                    </li>
-                                    <li>
-                                        <Link className='text-decoration-none text-secondary h6' to={'/service'}>Service</Link>
-                                    </li>
-                                    <li>
-                                        <Link className='text-decoration-none text-secondary h6' to={'/contact'}>Contact</Link>
-                                    </li>         
+                                    </li>        
                                 </ul>
                            </div>
                         </nav>

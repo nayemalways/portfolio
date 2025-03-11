@@ -9,10 +9,6 @@ import Loader from '../../Components/Main/LoaderDashboard';
 
 
 const DashHome = () => {
-
-    
-
-
     // Manage State
     const [blog, setBlog] = useState([]);
     const [service, setService] = useState([]);

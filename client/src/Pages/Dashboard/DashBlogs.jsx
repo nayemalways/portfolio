@@ -18,12 +18,9 @@ const DashBlogs = () => {
 
     return (
         <DashboardLayout>
-
-
               <section>
                     {/* Set loading animation  */}
                     { loading && <Loader/>}
-
 
                     <div className="container">
                         <div className="row d-flex justify-content-center align-items-center h-auto py-5">
