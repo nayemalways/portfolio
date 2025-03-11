@@ -7,10 +7,23 @@
 
 
  
- @media screen and (max-width: 768px) {
+ @media screen and (max-width: 767px) {
     .about-section {
-        div div div {
-            padding-top: 2rem;
+        padding-top: 25rem !important;
+        div {
+            div {
+                gap: 4rem;
+            }
+        }
+    }
+ }
+ @media screen and (max-width: 500px) {
+    .about-section {
+        padding-top: 17rem !important;
+        div {
+            div {
+                gap: 4rem;
+            }
         }
     }
  }

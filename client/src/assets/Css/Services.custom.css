@@ -2,3 +2,10 @@
     background: #090909b7;
     border: 1px solid ;
 }
+
+
+@media screen and (max-width: 767px) {
+    .service-section {
+        padding-top: 7rem;
+    }
+ }

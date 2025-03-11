@@ -55,5 +55,10 @@
                 }
             }
         }
+
+        .social_icon {
+            display: flex;
+            justify-content: center;
+        }
     }
 }

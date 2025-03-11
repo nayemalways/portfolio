@@ -41,11 +41,11 @@ const HeroSection = () => {
                                 <Link className='btn btn-info fw-bold text-dark' to={resume} download={resume} target='_blank'>Download Resume</Link>
                                 
                                 {/* Social */}
-                                <div className='d-flex gap-4 mt-4'>
-                                    <Link to='https://github.com/nayemalways' target='_blank' className='fs-4 text-white'>
+                                <div className='social_icon d-flex gap-4 mt-4'>
+                                    <Link to='https://github.com/nayemalways' target='_blank' className='block fs-4 text-white'>
                                         <i className="fa-brands fa-github"></i>
                                     </Link>
-                                    <Link to='https://www.linkedin.com/in/nayemalways/' target='_blank' className='fs-4 text-white '>
+                                    <Link to='https://www.linkedin.com/in/nayemalways/' target='_blank' className='block fs-4 text-white '>
                                         <i className="fa-brands fa-linkedin"></i>
                                     </Link>
                                 </div>

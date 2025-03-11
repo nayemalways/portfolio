@@ -19,8 +19,8 @@ const ServiceSection = () => {
 
     return (
         <>
-            <section>
-                <div className="container py-5">
+            <section className='service-section'>
+                <div className="container-fluid py-5">
 
                 {
                     loading ? (<BootstrapLoader />):(
