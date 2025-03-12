@@ -30,13 +30,13 @@ const Navbar = () => {
                            <div className='d-flex justify-content-end  ul-parent'>
                                 <ul  className='nav__link h-100 '>
                                     <li>
-                                        <Link className='text-decoration-none text-secondary h6' to={'/'}>Home</Link>
+                                        <Link className='text-decoration-none text-light h6' to={'/'}>Home</Link>
                                     </li>
                                     <li>
-                                        <Link className='text-decoration-none text-secondary h6' to={'/team'}>Team</Link>
+                                        <Link className='text-decoration-none text-light h6' to={'/team'}>Team</Link>
                                     </li>
                                     <li>
-                                        <Link className='text-decoration-none text-secondary h6' to={'/blog'}>Blog</Link>
+                                        <Link className='text-decoration-none text-light h6' to={'/blog'}>Blog</Link>
                                     </li>        
                                 </ul>
                            </div>
