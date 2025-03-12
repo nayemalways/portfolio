@@ -3,7 +3,7 @@ import React from 'react';
 const BgAnimation = () => {
     return (
         < >
-            <div class="circle">
+            <div className="circle">
                   
             </div>
         </>
