@@ -15,25 +15,25 @@ const HeroSection = () => {
                     <div className="row d-flex justify-content-center align-items-center h-100">
                         <div className="col-md-6 col-lg-6 col-12 py-5">
                             <div>
-                                <h4 className='text-secondary'>Hi, I'm</h4>
-                                <h1 className='h1_color text-size fw-bold '>     
+                                <h1 className='text-secondary fs-4'>Hi, I'm <br></br> <span className='fs-1 h1_color'>Nayem Ahmed</span></h1>
+                                <h4 className=' text-size fw-bold '>     
                                    {/* Added text animation  */}
                                     <TypeAnimation
                                             sequence={[
-                                                'Nayem Ahmed', // Types 'One'
+                                                'React.js Developer', // Types 'One'
                                                 2000, // Waits 1s
-                                                'A Full Stack Javascript Developer', // Deletes 'One' and types 'Two'
+                                                'Node.js Developer', // Deletes 'One' and types 'Two'
                                                 2000, // Waits 2s
                                                 ]}
                                                 speed={40}
                                                 wrapper="span"
                                             cursor={true}
                                             repeat={Infinity}
-                                            style={{ fontSize: '1.2em', display: 'inline-block' }}
+                                            style={{ fontSize: '', display: 'inline-block' }}
                                     />
                                     
-                                </h1>
-                                <p className='py-3 text-secondary'>
+                                </h4>
+                                <p className='py-3 fs-5 text-secondary'>
                                     I’m a full-stack developer who loves crafting clean, scalable web applications. My goal is to build solutions that offer both exceptional performance and a delightful user experience.
                                 </p>
                                 
