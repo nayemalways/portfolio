@@ -1,7 +1,6 @@
  /* --------------About Section Start------------------- */
  .about-section  {
-    font-size: clamp(12px, 4vw, 16px);
-    text-align: justify;
+    font-size: clamp(18px, 4vw, 16px);
  }
 
 

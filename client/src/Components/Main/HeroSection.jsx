@@ -33,7 +33,7 @@ const HeroSection = () => {
                                     />
                                     
                                 </h4>
-                                <p className='py-3 fs-5 text-secondary'>
+                                <p className='py-3 fs-6 text-white'>
                                     I’m a full-stack developer who loves crafting clean, scalable web applications. My goal is to build solutions that offer both exceptional performance and a delightful user experience.
                                 </p>
                                 
