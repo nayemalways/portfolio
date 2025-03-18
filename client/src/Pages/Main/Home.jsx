@@ -8,11 +8,6 @@ import BgAnimation from '../../Components/Main/BgAnimation';
 
 
 const Home = () => {
-
-     
- 
-
-     
     return (
         <Layout>
             <BgAnimation />
