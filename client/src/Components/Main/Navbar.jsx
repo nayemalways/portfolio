@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { RiMenu3Fill } from "react-icons/ri";
 
 const Navbar = () => {
@@ -30,13 +30,15 @@ const Navbar = () => {
                            <div className='d-flex justify-content-end  ul-parent'>
                                 <ul  className='nav__link h-100 '>
                                     <li>
-                                        <Link className='text-decoration-none text-light h6' to={'/'}>Home</Link>
+                                    <NavLink to="/" className={({ isActive }) => `link-style text-decoration-none h6 ${isActive ? "text-info fw-bold" : "text-light"}`}>
+                                        Home
+                                        </NavLink>
+                                     </li>
+                                    <li>
+                                        <NavLink to='/team' className={({ isActive }) => `link-style text-decoration-none h6 ${isActive ? "text-info fw-bold" : "text-light"}`} >Team</NavLink>
                                     </li>
                                     <li>
-                                        <Link className='text-decoration-none text-light h6' to={'/team'}>Team</Link>
-                                    </li>
-                                    <li>
-                                        <Link className='text-decoration-none text-light h6' to={'/blog'}>Blog</Link>
+                                        <NavLink  to='/blog' className={({ isActive }) => `link-style text-decoration-none h6 ${isActive ? "text-info fw-bold" : "text-light"}`}>Blog</NavLink>
                                     </li>        
                                 </ul>
                            </div>

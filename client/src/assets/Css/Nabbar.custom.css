@@ -22,6 +22,28 @@
  
 }
 
+/* Link hover style  */
+.link-style {
+    position: relative;
+}
+.link-style::before {
+    position: absolute;
+    bottom: -3px;
+    content: "";
+    width: 0;
+    height: 2px;
+    /* background: #40d3ec; */
+    background: #4b40ec;
+    z-index: 999;
+    transition: all .2s linear;
+}
+
+.link-style:hover::before {
+    width: 100%;
+}
+ 
+
+/* Small device toggler */
 .nav__link__small {
     width: 50vw;
     height: 100vh;
