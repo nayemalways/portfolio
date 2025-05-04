@@ -13,7 +13,12 @@ const BlogSection = ({data}) => {
                                 <p className='text-secondary h5'> Expolore our industry updated tech blogs </p>
                             </div>
                         </div>
-                        <div className="col-md-12 pt-5 d-flex justify-content-center align-items-center gap-4 flex-wrap">
+                        <div 
+                            className="
+                            col-md-12 pt-5 
+                            d-flex justify-content-center 
+                            align-items-center gap-4 
+                            flex-wrap">
                             
                         {
                             data.map((item, index) => <Card key={index}  data={item}/> )

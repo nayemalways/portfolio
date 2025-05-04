@@ -59,6 +59,9 @@
     white-space: normal; 
     word-wrap: break-word;  
     background-color: transparent !important; 
-    color: #b5adad !important;
+    color: #000000 !important;
+    img {
+        max-width: 500px;
+    }
 }
 

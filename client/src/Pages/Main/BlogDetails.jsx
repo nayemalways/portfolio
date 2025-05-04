@@ -44,21 +44,21 @@ const BlogDetails = () => {
     return (
         <Layout>
             <section>
-                <div className="container-fluid py-5">
+                <div className="container-fluid py-5 bg-secondary">
                     <div className="row d-flex justify-content-center">
-                        <div className="col-md-12 d-flex justify-content-center">
+                        <div className="col-md-12 d-flex justify-content-center  ">
 
                             {
                                 loading ? ( <BootstrapLoader /> ) : (
 
-                                    <div  className='blog-card d-flex flex-column w-75 bg-dark p-3 rounded rounded-4'>
-                                        <img className='img-fluid rounded rounded-4' src={data?.image} alt="" />
-                                        <div className="blog-body text-start pt-4">
-                                            <h1 className='blog_title text-white'> { data?.title } </h1>
+                                    <div  className='blog-card d-flex flex-column w-75 p-3 rounded rounded-4 bg-light'>
+                                        <img className='w-75 m-auto rounded rounded-4' src={data?.image} alt="" />
+                                        <div className="blog-body text-start pt-4 ">
+                                            <h1 className='blog_title text-black'> { data?.title } </h1>
                                             <span className='shadow shadow-4 bg-dark text-white d-inline-block py-2 px-3 my-3 rounded rounded-4 shadow shadow-lg'> Published:- {date} </span>
 
                                             { data?.description && (
-                                                <div  className=' text-start text-body line-spacing' dangerouslySetInnerHTML={{ __html: data.description }}></div>
+                                                <div  className=' text-start text-black line-spacing' dangerouslySetInnerHTML={{ __html: data.description }}></div>
                                             )}
 
                                         </div>
