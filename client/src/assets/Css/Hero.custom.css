@@ -1,22 +1,11 @@
 
-
-
-/* #Hero__section {
-    background-image: url('../image/hero-bg-min.');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    
-} */
-
 ._shadow {
     border-radius: 50%;
     box-shadow: 0 0 30px #20bac8;
 }
 
 .text-size {
-    font-size: clamp();
+    font-size: clamp(14px, 2vw, 16px);
 }
 
 
