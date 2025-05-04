@@ -25,6 +25,7 @@
 /* Link hover style  */
 .link-style {
     position: relative;
+    color: #3383fa !important;
 }
 .link-style::before {
     position: absolute;
@@ -32,7 +33,7 @@
     content: "";
     width: 0;
     height: 2px;
-    background: #38f2f8;
+    background: #3383fa;
     z-index: 999;
     transition: all .2s linear;
 }
