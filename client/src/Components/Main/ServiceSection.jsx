@@ -7,12 +7,15 @@ const ServiceSection = () => {
     // Mangae State
     const [ service, setService] = useState([]);
     const [loading, setLoading] = useState(true);
+
+    console.log(service);
     
     // Call APi and Load Data
     useEffect(() => {
         (async () => {
             const result = await ApiRequest("GET", "/read-service");
-            setService(result.data);
+            setService(result?.data);
+            console.log(result?.data);
             setLoading(false);
         })()
     }, [])

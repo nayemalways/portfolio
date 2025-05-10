@@ -26,7 +26,7 @@ router.get('/delete-blog/:blogId', userAuthentication, blogController.deleteBlog
 
 // Service related API
 router.post('/create-service', userAuthentication, ourServiceController.createService);
-router.get('/read-service',   ourServiceController.readService);
+router.get('/read-service',  ourServiceController.readService);
 router.get('/read-service/:serviceId', userAuthentication,  ourServiceController.singelServiceByID);
 router.post('/update-service/:serviceId', userAuthentication, ourServiceController.updateService );
 router.get('/delete-service/:serviceId', userAuthentication, ourServiceController.deleteService );

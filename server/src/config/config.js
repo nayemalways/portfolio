@@ -7,7 +7,7 @@ export const DATABASE_URL = process.env.DATABASE_URL;
 export const USER_NAME = process.env.USER_NAME;
 export const PASSWORD = process.env.PASSWORD;
 
-export const PORT = process.env.PORT;
+export const PORT = process.env.PORT || 3002;
 
 export const JWT_SECRET = process.env.JWT_TOKEN ;
 export const JWT_EXPIRATION = parseFloat(process.env.JWT_EXPIRATION);

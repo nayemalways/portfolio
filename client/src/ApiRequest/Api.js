@@ -6,7 +6,7 @@ import toast from "react-hot-toast";
 
 export const ApiRequest = async (method, EndPoint, postBody) => {
     try {
-        const basUrl = `https://nayem-ahmed.onrender.com/v1`;
+        const basUrl = `http://localhost:3002/v1`;
         const token = Cookies.get('token');
         const config = {
             method: method,
