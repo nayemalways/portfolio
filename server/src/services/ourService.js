@@ -25,11 +25,10 @@ export const serviceRead = async (req) => {
     try {
         // Read all service data
         const data = await ServiceModel.find();
-        // Finally return status
         return {status: "success", data: data};
 
     }catch(e) {
-        console.log(e.toString());
+        console.log(e.message);
         return {status: "error", message: "Internal server error!"};
     }
 }

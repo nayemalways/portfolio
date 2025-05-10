@@ -39,7 +39,7 @@ app.use(Limitter);
 // Web Cache
 app.set('etag', WEB_CACHE);
 app.use(express.static('public', {
-  maxAge: '1d',  // Cache for 1 day
+  maxAge: '20d',  // Cache for 20 day
   etag: true,    // Enable ETag
   lastModified: true
 }));
