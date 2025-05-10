@@ -5,17 +5,15 @@ import ServiceCard from './ServiceCard';
 
 const ServiceSection = () => {
     // Mangae State
-    const [ service, setService] = useState([]);
+    const [service, setService] = useState([]);
     const [loading, setLoading] = useState(true);
 
-    console.log(service);
     
     // Call APi and Load Data
     useEffect(() => {
         (async () => {
             const result = await ApiRequest("GET", "/read-service");
             setService(result?.data);
-            console.log(result?.data);
             setLoading(false);
         })()
     }, [])
@@ -34,7 +32,7 @@ const ServiceSection = () => {
                             <div className='pt-5  d-flex flex-wrap gap-4 justify-content-center align-items-center'>
                                 
                                  {
-                                    service.map((item, index) => {
+                                    service && service.map((item, index) => {
                                         return <ServiceCard key={index} data={item} />;
                                     })
                                  }
