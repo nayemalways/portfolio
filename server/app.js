@@ -28,7 +28,7 @@ const _dirname = path.resolve();
 // Global Applications Middleware
 // For local url will be: http://localhost:5173
 // For Render url will be: https://nayem-ahmed.onrender.com
-app.use(cors({ credentials: true, origin: "https://nayem-ahmed.onrender.com" }));
+app.use(cors({ credentials: true, origin: "http://localhost:5173" }));
 app.use(helmet());
 app.use(hpp());
 app.use(cookieParser());
