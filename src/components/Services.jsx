@@ -20,7 +20,7 @@ function ServiceCard({ service, index }) {
       whileHover={{ y: -5 }}
       className="relative overflow-hidden rounded-xl p-7 transition-colors duration-300 group"
       style={{
-        background: '#0F172A',
+        background: 'var(--bg-elevated)',
         border: '1px solid var(--border)',
       }}
       onMouseEnter={e => e.currentTarget.style.borderColor = 'var(--border-hover)'}
@@ -39,7 +39,7 @@ function ServiceCard({ service, index }) {
         <Icon size={22} />
       </div>
       <h3 className="font-sora font-semibold text-base mb-2 relative z-10">{service.title}</h3>
-      <p className="text-slate-400 text-sm leading-relaxed relative z-10">{service.desc}</p>
+      <p className="text-theme-muted text-sm leading-relaxed relative z-10">{service.desc}</p>
     </motion.div>
   )
 }
@@ -49,7 +49,7 @@ export default function Services() {
   const isInView = useInView(ref, { once: true, margin: '-80px' })
 
   return (
-    <section id="services" className="py-24 bg-surface">
+    <section id="services" className="py-24 bg-theme-surface">
       <div className="container-main">
         <motion.div
           ref={ref}
@@ -59,7 +59,7 @@ export default function Services() {
         >
           <p className="text-xs font-semibold tracking-[0.15em] uppercase text-accent mb-3">What I Do</p>
           <h2 className="font-sora text-3xl md:text-4xl font-bold leading-tight mb-3">Services I offer</h2>
-          <p className="text-slate-400 text-base max-w-md">
+          <p className="text-theme-muted text-base max-w-md">
             From frontend to backend, I cover the full stack with care and precision.
           </p>
         </motion.div>

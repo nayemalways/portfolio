@@ -1,19 +1,21 @@
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import {
-  SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiRedux, SiFramer,
+  SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiRedux,
   SiNodedotjs, SiExpress, SiGraphql, SiSocketdotio, SiPrisma,
   SiMongodb, SiPostgresql,
   SiGit, SiDocker, SiVercel, SiJest,
+  SiGreensock, SiRedis,
 } from 'react-icons/si'
 import { FiServer } from 'react-icons/fi'
 import { SKILL_CATEGORIES } from '../data'
 
 const iconMap = {
-  SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiRedux, SiFramer,
+  SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiRedux,
   SiNodedotjs, SiExpress, SiGraphql, SiSocketdotio, SiPrisma,
   SiMongodb, SiPostgresql,
   SiGit, SiDocker, SiVercel, SiJest,
+  SiGreensock, SiRedis,
   FiServer,
 }
 
@@ -28,7 +30,7 @@ function SkillCard({ item, parentInView }) {
       whileHover={{ y: -3 }}
       className="flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-300 cursor-default group"
       style={{
-        background: 'rgba(30,41,59,0.4)',
+        background: 'var(--icon-bg)',
         border: '1px solid var(--border)',
       }}
       onMouseEnter={e => {
@@ -38,14 +40,14 @@ function SkillCard({ item, parentInView }) {
       }}
       onMouseLeave={e => {
         e.currentTarget.style.borderColor = 'var(--border)'
-        e.currentTarget.style.background = 'rgba(30,41,59,0.4)'
+        e.currentTarget.style.background = 'var(--icon-bg)'
         e.currentTarget.style.boxShadow = 'none'
       }}
     >
       <div className="w-10 h-10 flex items-center justify-center rounded-lg shrink-0 transition-transform duration-300 group-hover:scale-110">
         <Icon size={22} />
       </div>
-      <span className="text-sm font-medium text-slate-300 group-hover:text-slate-100 transition-colors duration-200">
+      <span className="text-sm font-medium text-theme-secondary group-hover:text-theme-primary transition-colors duration-200">
         {item.name}
       </span>
     </motion.div>
@@ -79,7 +81,7 @@ export default function Skills() {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: ci * 0.1 }}
             >
-              <h3 className="font-sora font-semibold text-xs tracking-[0.12em] uppercase text-slate-500 mb-4">
+              <h3 className="font-sora font-semibold text-xs tracking-[0.12em] uppercase text-theme-dim mb-4">
                 {category.title}
               </h3>
               <div className="flex flex-col gap-2.5">

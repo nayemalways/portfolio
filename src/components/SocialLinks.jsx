@@ -41,7 +41,7 @@ export default function SocialLinks({ className = '' }) {
           target="_blank"
           rel="noreferrer"
           title={s.label}
-          className="w-10 h-10 rounded-lg flex items-center justify-center text-slate-400 transition-all duration-200 hover:text-accent hover:bg-[var(--accent-dim)]"
+          className="w-10 h-10 rounded-lg flex items-center justify-center text-theme-muted transition-all duration-200 hover:text-accent hover:bg-[var(--accent-dim)]"
           style={{ border: '1px solid var(--border)' }}
         >
           {s.icon}

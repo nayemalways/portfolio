@@ -21,7 +21,7 @@ export default function Hero() {
       <div
         className="absolute top-1/4 right-[5%] w-80 h-80 rounded-full pointer-events-none"
         style={{
-          background: 'radial-gradient(circle, rgba(245,158,11,0.07) 0%, transparent 70%)',
+          background: 'radial-gradient(circle, var(--glow) 0%, transparent 70%)',
         }}
       />
 
@@ -56,9 +56,9 @@ export default function Hero() {
           {/* Description */}
           <motion.p
             {...fadeUp(0.3)}
-            className="text-slate-400 text-lg max-w-lg mb-9 leading-relaxed"
+            className="text-theme-muted text-lg max-w-lg mb-9 leading-relaxed"
           >
-            Hi, I'm <strong className="text-slate-200 font-medium">MD. Nayem</strong> — a React &amp; Node.js
+            Hi, I'm <strong className="text-theme-secondary font-medium">MD. Nayem</strong> — a React &amp; Node.js
             developer focused on building clean, scalable web applications that users love and clients trust.
           </motion.p>
 
@@ -66,9 +66,9 @@ export default function Hero() {
           <motion.div {...fadeUp(0.4)} className="flex flex-wrap gap-4 mb-10">
             <a
               href="#projects"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-accent text-[#0F172A] font-semibold text-sm transition-all duration-200 hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-accent text-[var(--bg-primary)] font-semibold text-sm transition-all duration-200 hover:-translate-y-0.5"
               style={{ boxShadow: 'none' }}
-              onMouseEnter={e => e.currentTarget.style.boxShadow = '0 8px 25px rgba(245,158,11,0.3)'}
+              onMouseEnter={e => e.currentTarget.style.boxShadow = '0 8px 25px var(--accent-glow)'}
               onMouseLeave={e => e.currentTarget.style.boxShadow = 'none'}
             >
               <Eye size={16} />
@@ -78,7 +78,7 @@ export default function Hero() {
               href="https://drive.google.com/file/d/1pgmmQzAFiPsAMo3mstwA9lRGHJ0NnLVc/view"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-medium text-sm text-slate-200 transition-all duration-200 hover:text-accent hover:bg-[var(--accent-dim)]"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-medium text-sm text-theme-secondary transition-all duration-200 hover:text-accent hover:bg-[var(--accent-dim)]"
               style={{ border: '1px solid var(--border-hover)' }}
             >
               <FileText size={16} />

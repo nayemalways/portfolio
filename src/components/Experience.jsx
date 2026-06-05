@@ -18,7 +18,7 @@ function ExperienceCard({ exp, index }) {
       {/* Timeline line */}
       <div
         className="absolute left-[11px] top-3 bottom-0 w-px last:hidden"
-        style={{ background: 'linear-gradient(to bottom, var(--accent), rgba(148,163,184,0.1))' }}
+        style={{ background: 'linear-gradient(to bottom, var(--accent), var(--border))' }}
       />
 
       {/* Timeline dot */}
@@ -32,12 +32,12 @@ function ExperienceCard({ exp, index }) {
       {/* Card */}
       <div
         className="rounded-xl p-5 md:p-6 transition-all duration-300"
-        style={{ border: '1px solid var(--border)', background: '#0F172A' }}
+        style={{ border: '1px solid var(--border)', background: 'var(--bg-elevated)' }}
       >
         {/* Header */}
         <div className="flex flex-wrap items-start justify-between gap-2 mb-3">
           <div>
-            <h3 className="font-sora font-bold text-base md:text-lg text-slate-100">{exp.role}</h3>
+            <h3 className="font-sora font-bold text-base md:text-lg text-theme-primary">{exp.role}</h3>
             <p className="text-accent text-sm font-medium flex items-center gap-1.5 mt-0.5">
               <Briefcase size={13} />
               {exp.company}
@@ -46,7 +46,7 @@ function ExperienceCard({ exp, index }) {
         </div>
 
         {/* Meta */}
-        <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-slate-500 mb-4">
+        <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-theme-dim mb-4">
           <span className="flex items-center gap-1.5">
             <Calendar size={13} />
             {exp.period}
@@ -60,7 +60,7 @@ function ExperienceCard({ exp, index }) {
         {/* Highlights */}
         <ul className="space-y-2">
           {exp.highlights.map((h, i) => (
-            <li key={i} className="flex items-start gap-2.5 text-sm text-slate-400 leading-relaxed">
+            <li key={i} className="flex items-start gap-2.5 text-sm text-theme-muted leading-relaxed">
               <span
                 className="mt-[7px] w-1.5 h-1.5 rounded-full flex-shrink-0"
                 style={{ background: 'var(--accent)' }}
@@ -90,7 +90,7 @@ export default function Experience() {
         >
           <p className="text-xs font-semibold tracking-[0.15em] uppercase text-accent mb-3">Experience</p>
           <h2 className="font-sora text-3xl md:text-4xl font-bold leading-tight mb-3">Where I've Worked</h2>
-          <p className="text-slate-400 text-base max-w-md">
+          <p className="text-theme-muted text-base max-w-md">
             A timeline of roles, responsibilities, and real-world impact.
           </p>
         </motion.div>

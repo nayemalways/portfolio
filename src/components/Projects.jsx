@@ -30,10 +30,10 @@ function ProjectCard({ project, index }) {
       transition={{ duration: 0.65, delay: index * 0.12, ease: [0.22, 1, 0.36, 1] }}
       whileHover={{ y: -6 }}
       className="flex flex-col rounded-xl overflow-hidden transition-all duration-300"
-      style={{ border: '1px solid var(--border)', background: '#0F172A' }}
+      style={{ border: '1px solid var(--border)', background: 'var(--bg-elevated)' }}
       onMouseEnter={e => {
         e.currentTarget.style.borderColor = 'var(--border-hover)'
-        e.currentTarget.style.boxShadow = '0 20px 40px rgba(0,0,0,0.3)'
+        e.currentTarget.style.boxShadow = '0 20px 40px var(--shadow)'
       }}
       onMouseLeave={e => {
         e.currentTarget.style.borderColor = 'var(--border)'
@@ -74,14 +74,14 @@ function ProjectCard({ project, index }) {
         </div>
 
         <h3 className="font-sora font-bold text-base mb-2">{project.title}</h3>
-        <p className="text-slate-400 text-sm leading-relaxed flex-1">{project.desc}</p>
+        <p className="text-theme-muted text-sm leading-relaxed flex-1">{project.desc}</p>
 
         <div className="flex gap-3 mt-5">
           <a
             href={project.liveUrl}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-md text-xs font-semibold bg-accent text-[#0F172A] hover:opacity-85 transition-opacity"
+            className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-md text-xs font-semibold bg-accent text-[var(--bg-primary)] hover:opacity-85 transition-opacity"
           >
             <ExternalLink size={12} />
             Live Demo
@@ -90,7 +90,7 @@ function ProjectCard({ project, index }) {
             href={project.githubUrl}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-md text-xs font-medium text-slate-400 hover:text-accent hover:border-accent transition-colors duration-200"
+            className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-md text-xs font-medium text-theme-muted hover:text-accent hover:border-accent transition-colors duration-200"
             style={{ border: '1px solid var(--border)' }}
           >
             <Github size={12} />
@@ -107,7 +107,7 @@ export default function Projects() {
   const isInView = useInView(ref, { once: true, margin: '-80px' })
 
   return (
-    <section id="projects" className="py-24 bg-surface">
+    <section id="projects" className="py-24 bg-theme-surface">
       <div className="container-main">
         <motion.div
           ref={ref}
@@ -117,7 +117,7 @@ export default function Projects() {
         >
           <p className="text-xs font-semibold tracking-[0.15em] uppercase text-accent mb-3">Work</p>
           <h2 className="font-sora text-3xl md:text-4xl font-bold leading-tight mb-3">Featured Projects</h2>
-          <p className="text-slate-400 text-base max-w-md">
+          <p className="text-theme-muted text-base max-w-md">
             A selection of things I've built — real problems, real solutions.
           </p>
         </motion.div>

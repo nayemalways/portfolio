@@ -25,7 +25,7 @@ export default function ScrollToTop() {
           transition={{ duration: 0.25, ease: 'easeOut' }}
           onClick={scrollToTop}
           aria-label="Scroll to top"
-          className="fixed bottom-6 right-6 z-50 p-3 rounded-full text-[#0F172A] shadow-lg cursor-pointer"
+          className="fixed bottom-6 right-6 z-50 p-3 rounded-full text-[var(--bg-primary)] shadow-lg cursor-pointer"
           style={{ background: 'var(--accent)' }}
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}

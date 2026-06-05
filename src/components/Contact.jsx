@@ -13,7 +13,7 @@ export default function Contact() {
     setTimeout(() => setSent(false), 3000)
   }
 
-  const inputClass = `w-full bg-surface border rounded-lg px-4 py-3 text-sm text-slate-200 outline-none transition-colors duration-200 font-dm placeholder:text-slate-600 focus:border-accent`
+  const inputClass = `w-full bg-theme-surface border rounded-lg px-4 py-3 text-sm text-theme-secondary outline-none transition-colors duration-200 font-dm placeholder:text-theme-dim focus:border-accent`
 
   return (
     <section id="contact" className="py-24">
@@ -38,20 +38,20 @@ export default function Contact() {
           transition={{ duration: 0.65, delay: 0.1 }}
         >
           <h3 className="font-sora font-bold text-xl mb-3">Got a project in mind?</h3>
-          <p className="text-slate-400 text-sm leading-relaxed mb-8">
+          <p className="text-theme-muted text-sm leading-relaxed mb-8">
             Whether it's a startup MVP, a product revamp, or ongoing development — I'm open
             to opportunities. Let's build something great together.
           </p>
 
           <div className="space-y-4">
             {[
-              { icon: Mail, text: 'nayemalways@email.com' },
+              { icon: Mail, text: 'nayemahmed.developer@email.com' },
               { icon: MapPin, text: 'Dhaka, Bangladesh' },
               { icon: Clock, text: 'Mon–Fri, 9AM–6PM (BST)' },
             ].map(({ icon: Icon, text }) => (
               <div key={text} className="flex items-center gap-3">
                 <Icon size={18} className="text-accent flex-shrink-0" />
-                <span className="text-slate-400 text-sm">{text}</span>
+                <span className="text-theme-muted text-sm">{text}</span>
               </div>
             ))}
           </div>
@@ -67,7 +67,7 @@ export default function Contact() {
         >
           <div className="grid grid-cols-2 gap-4">
             <div className="flex flex-col gap-1.5">
-              <label className="text-[11px] font-semibold text-slate-400 tracking-wider uppercase">Name</label>
+              <label className="text-[11px] font-semibold text-theme-muted tracking-wider uppercase">Name</label>
               <input
                 type="text"
                 placeholder="Your name"
@@ -77,7 +77,7 @@ export default function Contact() {
               />
             </div>
             <div className="flex flex-col gap-1.5">
-              <label className="text-[11px] font-semibold text-slate-400 tracking-wider uppercase">Email</label>
+              <label className="text-[11px] font-semibold text-theme-muted tracking-wider uppercase">Email</label>
               <input
                 type="email"
                 placeholder="your@email.com"
@@ -89,7 +89,7 @@ export default function Contact() {
           </div>
 
           <div className="flex flex-col gap-1.5">
-            <label className="text-[11px] font-semibold text-slate-400 tracking-wider uppercase">Subject</label>
+            <label className="text-[11px] font-semibold text-theme-muted tracking-wider uppercase">Subject</label>
             <input
               type="text"
               placeholder="What's this about?"
@@ -100,7 +100,7 @@ export default function Contact() {
           </div>
 
           <div className="flex flex-col gap-1.5">
-            <label className="text-[11px] font-semibold text-slate-400 tracking-wider uppercase">Message</label>
+            <label className="text-[11px] font-semibold text-theme-muted tracking-wider uppercase">Message</label>
             <textarea
               rows={5}
               placeholder="Tell me about your project..."
@@ -114,7 +114,7 @@ export default function Contact() {
             type="submit"
             whileHover={{ y: -2, boxShadow: '0 8px 25px rgba(245,158,11,0.3)' }}
             whileTap={{ scale: 0.97 }}
-            className="self-start inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-accent text-[#0F172A] font-semibold text-sm transition-all duration-200"
+            className="self-start inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-accent text-[var(--bg-primary)] font-semibold text-sm transition-all duration-200"
           >
             {sent ? 'Message Sent! 🎉' : (
               <>

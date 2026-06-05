@@ -1,4 +1,4 @@
-export const NAV_LINKS = ['Blog']
+export const NAV_LINKS = ['Blog', 'Services', 'Skills', 'Projects', 'Contact']
 
 export const SOCIAL_LINKS = {
   linkedin: 'https://linkedin.com/in/nayemalways',
@@ -43,7 +43,7 @@ export const SKILL_CATEGORIES = [
       { name: 'TypeScript', icon: 'SiTypescript', color: '#3178C6' },
       { name: 'Tailwind CSS', icon: 'SiTailwindcss', color: '#06B6D4' },
       { name: 'Redux', icon: 'SiRedux', color: '#764ABC' },
-      { name: 'Framer Motion', icon: 'SiFramer', color: '#0055FF' },
+      { name: 'GSAP', icon: 'SiGreensock', color: '#88CE02' },
     ],
   },
   {
@@ -54,6 +54,7 @@ export const SKILL_CATEGORIES = [
       { name: 'GraphQL', icon: 'SiGraphql', color: '#E10098' },
       { name: 'Socket.io', icon: 'SiSocketdotio', color: '#010101' },
       { name: 'Prisma', icon: 'SiPrisma', color: '#2D3748' },
+      { name: 'BullMQ', icon: 'FiServer', color: '#FF6B35' },
     ],
   },
   {
@@ -61,6 +62,7 @@ export const SKILL_CATEGORIES = [
     items: [
       { name: 'MongoDB', icon: 'SiMongodb', color: '#47A248' },
       { name: 'PostgreSQL', icon: 'SiPostgresql', color: '#4169E1' },
+      { name: 'Redis', icon: 'SiRedis', color: '#FF4438' },
     ],
   },
   {
@@ -78,40 +80,27 @@ export const SKILL_CATEGORIES = [
 export const EXPERIENCES = [
   {
     id: 1,
-    role: 'Full Stack Developer',
-    company: 'TechCorp Inc.',
-    period: 'Jan 2024 — Present',
+    role: 'Node.js Backend Developer',
+    company: 'Beuptech Agency',
+    period: 'Oct 20, 2025 — Present',
     location: 'Remote',
     highlights: [
-      'Architected and built a real-time project management platform serving 2,000+ users using React, Node.js, and WebSockets',
-      'Designed RESTful APIs with Express and MongoDB, reducing response times by 35% through optimized indexing and caching',
-      'Implemented CI/CD pipelines with Docker and GitHub Actions, cutting deployment time from 30min to under 3min',
-      'Mentored 3 junior developers through code reviews, pair programming, and weekly tech talks',
+      'Managing full project lifecycle from architecture design to deployment, leading a team of developers to deliver scalable backend solutions',
+      'Designing and maintaining RESTful APIs with Node.js, Express, and MongoDB, ensuring high performance and data integrity',
+      'Deploying and managing applications using Docker containers with CI/CD pipelines for streamlined releases and rollbacks',
+      'Conducting thorough code reviews and bug fixes, maintaining clean code standards and improving overall system reliability',
     ],
   },
   {
     id: 2,
-    role: 'Frontend Developer',
-    company: 'WebStudio Agency',
-    period: 'Jun 2022 — Dec 2023',
-    location: 'Dhaka, Bangladesh',
-    highlights: [
-      'Developed 12+ client-facing web applications using React, Next.js, and Tailwind CSS with perfect Lighthouse scores',
-      'Built a component library with 40+ reusable UI components, accelerating project delivery by 40%',
-      'Integrated Stripe payments, Auth0 authentication, and headless CMS solutions for diverse client requirements',
-      'Led the migration of a legacy jQuery codebase to React, improving page load speed by 60%',
-    ],
-  },
-  {
-    id: 3,
-    role: 'Junior Developer',
-    company: 'StartupHub',
-    period: 'Mar 2021 — May 2022',
+    role: 'Web Developer',
+    company: 'SM Technology',
+    period: 'Jul 15, 2025 — Oct 14, 2025',
     location: 'Remote',
     highlights: [
-      'Collaborated on building an e-commerce platform handling 10,000+ daily transactions with React and Node.js',
-      'Wrote unit and integration tests using Jest and React Testing Library, achieving 85% code coverage',
-      'Participated in daily standups, sprint planning, and retrospectives in an Agile/Scrum team of 8',
+      'Developed and maintained responsive websites using Squarespace CMS, ensuring high performance, reliability, and usability',
+      'Customized Squarespace templates using HTML, CSS, and JavaScript to meet client branding and business requirements',
+      'Optimized site structure, content management workflows, and SEO settings for improved visibility and performance',
     ],
   },
 ]

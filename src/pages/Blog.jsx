@@ -16,10 +16,10 @@ function BlogCard({ post, index }) {
     <motion.article
       {...fadeUp(index * 0.08)}
       className="group rounded-xl overflow-hidden transition-all duration-300"
-      style={{ border: '1px solid var(--border)', background: '#0F172A' }}
+      style={{ border: '1px solid var(--border)', background: 'var(--bg-elevated)' }}
     >
       <Link to={`/blog/${post.slug}`} className="block p-6 md:p-8">
-        <div className="flex flex-wrap items-center gap-3 text-xs text-slate-500 mb-3">
+        <div className="flex flex-wrap items-center gap-3 text-xs text-theme-dim mb-3">
           <span className="flex items-center gap-1.5">
             <Calendar size={13} />
             {new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
@@ -36,11 +36,11 @@ function BlogCard({ post, index }) {
           </span>
         </div>
 
-        <h2 className="font-sora font-bold text-lg md:text-xl leading-snug mb-3 text-slate-100 group-hover:text-accent transition-colors duration-200">
+        <h2 className="font-sora font-bold text-lg md:text-xl leading-snug mb-3 text-theme-primary group-hover:text-accent transition-colors duration-200">
           {post.title}
         </h2>
 
-        <p className="text-slate-400 text-sm leading-relaxed mb-4 line-clamp-2">
+        <p className="text-theme-muted text-sm leading-relaxed mb-4 line-clamp-2">
           {post.excerpt}
         </p>
 
@@ -48,8 +48,8 @@ function BlogCard({ post, index }) {
           {post.tags.slice(0, 3).map(tag => (
             <span
               key={tag}
-              className="text-[10px] font-medium px-2 py-0.5 rounded text-slate-400"
-              style={{ background: 'rgba(148,163,184,0.08)' }}
+              className="text-[10px] font-medium px-2 py-0.5 rounded text-theme-muted"
+              style={{ background: 'var(--icon-bg)' }}
             >
               {tag}
             </span>
@@ -72,9 +72,9 @@ function Sidebar() {
       {/* Categories */}
       <div
         className="rounded-xl p-5"
-        style={{ border: '1px solid var(--border)', background: '#0F172A' }}
+        style={{ border: '1px solid var(--border)', background: 'var(--bg-elevated)' }}
       >
-        <h3 className="font-sora font-bold text-sm mb-4 text-slate-200">Categories</h3>
+        <h3 className="font-sora font-bold text-sm mb-4 text-theme-secondary">Categories</h3>
         <div className="space-y-1">
           {SIDEBAR_LINKS.map(link => {
             const Icon = iconMap[link.icon]
@@ -84,7 +84,7 @@ function Sidebar() {
             return (
               <div
                 key={link.label}
-                className="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-slate-400 transition-colors duration-200"
+                className="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-theme-muted transition-colors duration-200"
                 style={{ cursor: 'default' }}
               >
                 <span className="flex items-center gap-2">
@@ -106,9 +106,9 @@ function Sidebar() {
       {/* Recommended */}
       <div
         className="rounded-xl p-5"
-        style={{ border: '1px solid var(--border)', background: '#0F172A' }}
+        style={{ border: '1px solid var(--border)', background: 'var(--bg-elevated)' }}
       >
-        <h3 className="font-sora font-bold text-sm mb-4 text-slate-200">Recommended</h3>
+        <h3 className="font-sora font-bold text-sm mb-4 text-theme-secondary">Recommended</h3>
         <div className="space-y-4">
           {recommended.map(post => (
             <Link
@@ -116,10 +116,10 @@ function Sidebar() {
               to={`/blog/${post.slug}`}
               className="block group"
             >
-              <p className="text-sm text-slate-300 group-hover:text-accent transition-colors duration-200 leading-snug mb-1 line-clamp-2">
+              <p className="text-sm text-theme-secondary group-hover:text-accent transition-colors duration-200 leading-snug mb-1 line-clamp-2">
                 {post.title}
               </p>
-              <p className="text-[11px] text-slate-500 flex items-center gap-2">
+              <p className="text-[11px] text-theme-dim flex items-center gap-2">
                 <span>{post.readTime}</span>
                 <span>{new Date(post.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</span>
               </p>
@@ -139,7 +139,7 @@ export default function Blog() {
         <motion.div {...fadeUp(0)}>
           <p className="text-xs font-semibold tracking-[0.15em] uppercase text-accent mb-3">Writing</p>
           <h1 className="font-sora text-3xl md:text-4xl font-bold leading-tight mb-3">Blog & Articles</h1>
-          <p className="text-slate-400 text-base max-w-lg">
+          <p className="text-theme-muted text-base max-w-lg">
             Thoughts on web development, architecture, and building better software.
           </p>
         </motion.div>
