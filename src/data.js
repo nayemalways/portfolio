@@ -2,6 +2,7 @@ import yeppads from "../public/projects_photos/yeppads.png";
 import tourista from "../public/projects_photos/tourista.png";
 import nike from "../public/projects_photos/nike.png";
 import plainB from "../public/projects_photos/plainb.png";
+import dreamAgency from "../public/projects_photos/dream_agency.png";
 
 
 export const NAV_LINKS = ['Blog', 'Services', 'Skills', 'Projects', 'Contact']
@@ -165,7 +166,7 @@ export const PROJECTS = [
     desc: 'Dream Agency is a portfolio landing page of an organization using Bootstrap ',
     scope: ['Frontend'],
     tags: ['HTML', 'Bootstrap'],
-    image: plainB,
+    image: dreamAgency,
     color: 'from-[#1A0F2E] to-[#0F172A]',
     accentColor: '#7F77DD',
     liveUrl: 'https://dreamagency-eight.vercel.app/',
