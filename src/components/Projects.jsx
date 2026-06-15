@@ -3,17 +3,10 @@ import { motion, useInView } from 'framer-motion'
 import { ExternalLink, Github } from 'lucide-react'
 import { PROJECTS } from '../data'
 
-function ProjectThumb({ color, accentColor }) {
+function ProjectThumb({ color, accentColor, image }) {
   return (
     <div className={`h-44 bg-gradient-to-br ${color} flex items-center justify-center`}>
-      <svg viewBox="0 0 120 80" width="120" height="80" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="10" y="10" width="100" height="60" rx="6"
-          stroke={accentColor} strokeWidth="1.2" strokeDasharray="4 2" />
-        <rect x="18" y="18" width="42" height="28" rx="4" fill="#1E293B" stroke={accentColor} strokeWidth="1" />
-        <rect x="64" y="18" width="38" height="12" rx="3" fill="#F59E0B" opacity="0.75" />
-        <rect x="64" y="34" width="28" height="12" rx="3" fill="#1E293B" stroke="#F59E0B" strokeWidth="0.8" />
-        <rect x="18" y="52" width="84" height="7" rx="2" fill="#1E293B" stroke="#94A3B8" strokeWidth="0.5" />
-      </svg>
+       <img src={image} alt="" />
     </div>
   )
 }
@@ -40,7 +33,7 @@ function ProjectCard({ project, index }) {
         e.currentTarget.style.boxShadow = 'none'
       }}
     >
-      <ProjectThumb color={project.color} accentColor={project.accentColor} />
+      <ProjectThumb color={project.color} accentColor={project.accentColor} image={project.image}/>
 
       <div className="p-6 flex flex-col flex-1">
         {/* Scope tags (role indicators) */}

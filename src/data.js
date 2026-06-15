@@ -1,3 +1,9 @@
+import yeppads from "../public/projects_photos/yeppads.png";
+import tourista from "../public/projects_photos/tourista.png";
+import nike from "../public/projects_photos/nike.png";
+import plainB from "../public/projects_photos/plainb.png";
+
+
 export const NAV_LINKS = ['Blog', 'Services', 'Skills', 'Projects', 'Contact']
 
 export const SOCIAL_LINKS = {
@@ -39,7 +45,6 @@ export const SKILL_CATEGORIES = [
     title: 'Frontend',
     items: [
       { name: 'React', icon: 'SiReact', color: '#61DAFB' },
-      { name: 'Next.js', icon: 'SiNextdotjs', color: '#000000' },
       { name: 'TypeScript', icon: 'SiTypescript', color: '#3178C6' },
       { name: 'Tailwind CSS', icon: 'SiTailwindcss', color: '#06B6D4' },
       { name: 'Redux', icon: 'SiRedux', color: '#764ABC' },
@@ -51,7 +56,6 @@ export const SKILL_CATEGORIES = [
     items: [
       { name: 'Node.js', icon: 'SiNodedotjs', color: '#5FA04E' },
       { name: 'Express.js', icon: 'SiExpress', color: '#000000' },
-      { name: 'GraphQL', icon: 'SiGraphql', color: '#E10098' },
       { name: 'Socket.io', icon: 'SiSocketdotio', color: '#010101' },
       { name: 'Prisma', icon: 'SiPrisma', color: '#2D3748' },
       { name: 'BullMQ', icon: 'FiServer', color: '#FF6B35' },
@@ -70,9 +74,10 @@ export const SKILL_CATEGORIES = [
     items: [
       { name: 'Git', icon: 'SiGit', color: '#F05032' },
       { name: 'Docker', icon: 'SiDocker', color: '#2496ED' },
+      { name: 'Linux', icon: 'SiLinux', color: '#FCC624' },
+      { name: 'Ubuntu (VPS)', icon: 'SiUbuntu', color: '#E95420' },
       { name: 'AWS', icon: 'FiServer', color: '#FF9900' },
       { name: 'Vercel', icon: 'SiVercel', color: '#000000' },
-      { name: 'Jest', icon: 'SiJest', color: '#C21325' },
     ],
   },
 ]
@@ -108,35 +113,62 @@ export const EXPERIENCES = [
 export const PROJECTS = [
   {
     id: 1,
-    title: 'TaskFlow — Project Management App',
-    desc: 'A real-time project management tool with Kanban boards, team collaboration, role-based access, and activity tracking.',
+    title: 'YeppAds — Service Advertising Platform',
+    desc: 'Develop and maintained backend side using Node.js, Express.js & MongoDB. Used bullMQ for background job processing and reducing API latency 30-40%.',
     scope: ['Full Stack'],
-    tags: ['React', 'Node.js', 'MongoDB'],
+    tags: ['Node.js', 'Express.js', 'MongoDB', 'BullMQ'],
     color: 'from-[#0F172A] to-[#1E3A5F]',
     accentColor: '#378ADD',
-    liveUrl: '#',
-    githubUrl: '#',
+    image: yeppads,
+    liveUrl: 'https://yeppads.com',
+    githubUrl: 'https://github.com/nayemalways/',
   },
   {
     id: 2,
-    title: 'ShopSphere — E-commerce Platform',
-    desc: 'Feature-rich e-commerce platform with product search, cart management, secure Stripe payments, and an admin dashboard.',
-    scope: ['Frontend'],
-    tags: ['Next.js', 'PostgreSQL', 'Stripe'],
+    title: 'Tourista — Tour Booking platform',
+    desc: 'Fullstack tour booking platform. Jwt based authentication, booking, SSL ecommerz payment gateway integration.',
+    scope: ['Fullstack'],
+    tags: ['React.js', 'Redux', 'Tailwind CSS','Node.js', 'Express.js', 'MongoDB', 'SSL Ecommerce'],
     color: 'from-[#0F2419] to-[#0F172A]',
+    image: tourista,
     accentColor: '#1D9E75',
-    liveUrl: '#',
-    githubUrl: '#',
+    liveUrl: 'https://tourista-frontend.vercel.app/',
+    githubUrl: 'https://github.com/nayemalways/Tourista_Server',
   },
   {
     id: 3,
-    title: 'AuthKit — Auth Boilerplate',
-    desc: 'Production-ready authentication system with JWT, refresh tokens, role management, and 2FA — plug-and-play for any project.',
-    scope: ['Backend'],
-    tags: ['React', 'Express', 'JWT'],
+    title: 'Nike Shoes — Shoes E-commerce Website',
+    desc: 'Nike shoes branding e-commerce based landing page using Tailwind CSS and React.js',
+    scope: ['Frontend'],
+    tags: ['React', 'Tailwind CSS'],
+    image: nike,
     color: 'from-[#1A0F2E] to-[#0F172A]',
     accentColor: '#7F77DD',
-    liveUrl: '#',
-    githubUrl: '#',
+    liveUrl: 'https://shoes-corner.netlify.app/',
+    githubUrl: 'https://github.com/nayemalways/NikeShoes',
+  },
+  {
+    id: 4,
+    title: 'PlainB — E-commerce Platform',
+    desc: 'PlainB is a electronics e-commerce platform. There is JWT based auth system, add to cart, add wishlist, SSL ecommerz payment gateway integration',
+    scope: ['Frontend'],
+    tags: ['React', 'Tailwind CSS', 'Zustand', 'Node.js', 'Express.js', 'MongoDB'],
+    image: plainB,
+    color: 'from-[#1A0F2E] to-[#0F172A]',
+    accentColor: '#7F77DD',
+    liveUrl: 'hhttps://plainb.vercel.app/',
+    githubUrl: 'https://github.com/nayemalways/Tourista_Server',
+  },
+  {
+    id: 5,
+    title: 'Dream Agency — A Agency Portfolio',
+    desc: 'Dream Agency is a portfolio landing page of an organization using Bootstrap ',
+    scope: ['Frontend'],
+    tags: ['HTML', 'Bootstrap'],
+    image: plainB,
+    color: 'from-[#1A0F2E] to-[#0F172A]',
+    accentColor: '#7F77DD',
+    liveUrl: 'https://dreamagency-eight.vercel.app/',
+    githubUrl: 'https://github.com/nayemalways/DreamAgency',
   },
 ]

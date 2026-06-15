@@ -1,20 +1,20 @@
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import {
-  SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiRedux,
-  SiNodedotjs, SiExpress, SiGraphql, SiSocketdotio, SiPrisma,
+  SiReact, SiTypescript, SiTailwindcss, SiRedux,
+  SiNodedotjs, SiExpress, SiSocketdotio, SiPrisma,
   SiMongodb, SiPostgresql,
-  SiGit, SiDocker, SiVercel, SiJest,
+  SiGit, SiDocker, SiVercel, SiLinux, SiUbuntu,
   SiGreensock, SiRedis,
 } from 'react-icons/si'
 import { FiServer } from 'react-icons/fi'
 import { SKILL_CATEGORIES } from '../data'
 
 const iconMap = {
-  SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiRedux,
-  SiNodedotjs, SiExpress, SiGraphql, SiSocketdotio, SiPrisma,
+  SiReact, SiTypescript, SiTailwindcss, SiRedux,
+  SiNodedotjs, SiExpress, SiSocketdotio, SiPrisma,
   SiMongodb, SiPostgresql,
-  SiGit, SiDocker, SiVercel, SiJest,
+  SiGit, SiDocker, SiVercel, SiLinux, SiUbuntu,
   SiGreensock, SiRedis,
   FiServer,
 }

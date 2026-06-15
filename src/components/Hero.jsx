@@ -48,9 +48,8 @@ export default function Hero() {
             {...fadeUp(0.2)}
             className="font-sora text-3xl md:text-4xl xl:text-5xl font-bold leading-[1.12] tracking-tight mb-5"
           >
-            Fullstack<br />
-            <span className="text-accent">Node.js</span> & <span className="text-accent">React.js</span><br />
-            Developer
+          <span className="text-accent">Software Developer |</span><br />
+            Scalable Web Systems, Cloud & DevOps
           </motion.h1>
 
           {/* Description */}
@@ -58,8 +57,9 @@ export default function Hero() {
             {...fadeUp(0.3)}
             className="text-theme-muted text-lg max-w-lg mb-9 leading-relaxed"
           >
-            Hi, I'm <strong className="text-theme-secondary font-medium">MD. Nayem</strong> — a React &amp; Node.js
-            developer focused on building clean, scalable web applications that users love and clients trust.
+            Hi, I'm <strong className="text-theme-secondary font-medium">Nayem. </strong>
+            Backend developer focused on scalable systems, cloud infrastructure, and production-ready web applications & Node.js expertise.
+
           </motion.p>
 
           {/* CTA Buttons */}
