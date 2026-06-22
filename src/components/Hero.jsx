@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { Eye, FileText } from 'lucide-react'
 import SocialLinks from './SocialLinks'
+import myPhoto from "../../public/projects_photos/me.png";
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 28 },
@@ -103,7 +104,7 @@ export default function Hero() {
             {/* Inner circle */}
             <div className="absolute inset-4 rounded-full bg-gradient-to-br from-slate-800 to-slate-900 border border-accent/20 flex items-center justify-center overflow-hidden">
               <img
-                src="/public/projects_photos/me.png"
+                src={myPhoto}
                 alt="MD. Nayem"
                 className="w-full h-full object-cover"
               />
