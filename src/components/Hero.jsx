@@ -103,7 +103,7 @@ export default function Hero() {
             {/* Inner circle */}
             <div className="absolute inset-4 rounded-full bg-gradient-to-br from-slate-800 to-slate-900 border border-accent/20 flex items-center justify-center overflow-hidden">
               <img
-                src="https://avatars.githubusercontent.com/u/124289808?v=4"
+                src="/public/projects_photos/me.png"
                 alt="MD. Nayem"
                 className="w-full h-full object-cover"
               />
