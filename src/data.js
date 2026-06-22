@@ -161,18 +161,6 @@ export const PROJECTS = [
     githubUrl: 'https://github.com/nayemalways/NikeShoes',
   },
   {
-    id: 4,
-    title: 'PlainB — E-commerce Platform',
-    desc: 'PlainB is a electronics e-commerce platform. There is JWT based auth system, add to cart, add wishlist, SSL ecommerz payment gateway integration',
-    scope: ['Frontend'],
-    tags: ['React', 'Tailwind CSS', 'Zustand', 'Node.js', 'Express.js', 'MongoDB'],
-    image: plainB,
-    color: 'from-[#1A0F2E] to-[#0F172A]',
-    accentColor: '#7F77DD',
-    liveUrl: 'https://plainb.vercel.app/',
-    githubUrl: 'https://github.com/nayemalways/Tourista_Server',
-  },
-  {
     id: 5,
     title: 'Dream Agency — A Agency Portfolio',
     desc: 'Dream Agency is a portfolio landing page of an organization using Bootstrap ',
