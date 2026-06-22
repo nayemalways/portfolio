@@ -50,7 +50,7 @@ export default function Hero() {
             className="font-sora text-3xl md:text-4xl xl:text-5xl font-bold leading-[1.12] tracking-tight mb-5"
           >
           <span className="text-accent">Software Developer |</span><br />
-            Scalable Web Systems, Cloud & DevOps
+            Cloud & DevOps
           </motion.h1>
 
           {/* Description */}
