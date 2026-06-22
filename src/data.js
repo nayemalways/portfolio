@@ -115,7 +115,7 @@ export const PROJECTS = [
   {
     id: 1,
     title: 'YeppAds — Service Advertising Platform',
-    desc: 'Develop and maintained backend side using Node.js, Express.js & MongoDB. Used bullMQ for background job processing and reducing API latency 30-40%.',
+    desc: 'Develop and maintained backend side using Node.js, Express.js & MongoDB. Used bullMQ for background job processing and reduced API latency.',
     scope: ['Full Stack'],
     tags: ['Node.js', 'Express.js', 'MongoDB', 'BullMQ'],
     color: 'from-[#0F172A] to-[#1E3A5F]',
@@ -138,6 +138,18 @@ export const PROJECTS = [
   },
   {
     id: 3,
+    title: 'PlainB — E-commerce Platform',
+    desc: 'PlainB is a electronics e-commerce platform. There is JWT based auth system, add to cart, add wishlist, SSL ecommerz payment gateway integration',
+    scope: ['Frontend'],
+    tags: ['React', 'Tailwind CSS', 'Zustand', 'Node.js', 'Express.js', 'MongoDB'],
+    image: plainB,
+    color: 'from-[#1A0F2E] to-[#0F172A]',
+    accentColor: '#7F77DD',
+    liveUrl: 'https://plainb.vercel.app/',
+    githubUrl: 'https://github.com/nayemalways/Tourista_Server',
+  },
+  {
+    id: 4,
     title: 'Nike Shoes — Shoes E-commerce Website',
     desc: 'Nike shoes branding e-commerce based landing page using Tailwind CSS and React.js',
     scope: ['Frontend'],
@@ -157,7 +169,7 @@ export const PROJECTS = [
     image: plainB,
     color: 'from-[#1A0F2E] to-[#0F172A]',
     accentColor: '#7F77DD',
-    liveUrl: 'hhttps://plainb.vercel.app/',
+    liveUrl: 'https://plainb.vercel.app/',
     githubUrl: 'https://github.com/nayemalways/Tourista_Server',
   },
   {
