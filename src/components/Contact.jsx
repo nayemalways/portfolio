@@ -45,9 +45,9 @@ export default function Contact() {
 
           <div className="space-y-4">
             {[
-              { icon: Mail, text: 'nayemahmed.developer@email.com' },
+              { icon: Mail, text: 'nayemahmed.developer@gmail.com' },
               { icon: MapPin, text: 'Dhaka, Bangladesh' },
-              { icon: Clock, text: 'Mon–Fri, 9AM–6PM (BST)' },
+              { icon: Clock, text: 'Mon-Fri, 9AM–6PM (BST)' },
             ].map(({ icon: Icon, text }) => (
               <div key={text} className="flex items-center gap-3">
                 <Icon size={18} className="text-accent flex-shrink-0" />

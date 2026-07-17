@@ -76,7 +76,7 @@ export default function Hero() {
               View Projects
             </a>
             <a
-              href="https://drive.google.com/file/d/1pgmmQzAFiPsAMo3mstwA9lRGHJ0NnLVc/view"
+              href="https://drive.google.com/file/d/1gdiWG0YeMRo0Oo7uvCIob-EQfTNWR2oM/view?usp=sharing"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-medium text-sm text-theme-secondary transition-all duration-200 hover:text-accent hover:bg-[var(--accent-dim)]"

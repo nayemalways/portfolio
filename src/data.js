@@ -89,7 +89,7 @@ export const EXPERIENCES = [
     role: 'Node.js Backend Developer',
     company: 'Beuptech Agency',
     period: 'Oct 20, 2025 — Present',
-    location: 'Remote',
+    location: 'On-Site',
     highlights: [
       'Managing full project lifecycle from architecture design to deployment, leading a team of developers to deliver scalable backend solutions',
       'Designing and maintaining RESTful APIs with Node.js, Express, and MongoDB, ensuring high performance and data integrity',
@@ -102,7 +102,7 @@ export const EXPERIENCES = [
     role: 'Web Developer',
     company: 'SM Technology',
     period: 'Jul 15, 2025 — Oct 14, 2025',
-    location: 'Remote',
+    location: 'On-Site',
     highlights: [
       'Developed and maintained responsive websites using Squarespace CMS, ensuring high performance, reliability, and usability',
       'Customized Squarespace templates using HTML, CSS, and JavaScript to meet client branding and business requirements',
