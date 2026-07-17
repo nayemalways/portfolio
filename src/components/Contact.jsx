@@ -1,17 +1,17 @@
-import { useRef, useState } from 'react'
+import { useRef, useEffect } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { Mail, MapPin, Clock, Send } from 'lucide-react'
+import { useForm, ValidationError } from '@formspree/react'
 
 export default function Contact() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-80px' })
-  const [sent, setSent] = useState(false)
+  const formRef = useRef(null)
+  const [state, handleSubmit] = useForm('xaqreero')
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    setSent(true)
-    setTimeout(() => setSent(false), 3000)
-  }
+  useEffect(() => {
+    if (state.succeeded && formRef.current) formRef.current.reset()
+  }, [state.succeeded])
 
   const inputClass = `w-full bg-theme-surface border rounded-lg px-4 py-3 text-sm text-theme-secondary outline-none transition-colors duration-200 font-dm placeholder:text-theme-dim focus:border-accent`
 
@@ -59,6 +59,7 @@ export default function Contact() {
 
         {/* Form */}
         <motion.form
+          ref={formRef}
           onSubmit={handleSubmit}
           initial={{ opacity: 0, x: 20 }}
           animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -70,21 +71,25 @@ export default function Contact() {
               <label className="text-[11px] font-semibold text-theme-muted tracking-wider uppercase">Name</label>
               <input
                 type="text"
+                name="name"
                 placeholder="Your name"
                 required
                 className={inputClass}
                 style={{ borderColor: 'var(--border)' }}
               />
+              <ValidationError prefix="Name" field="name" errors={state.errors} className="text-red-400 text-xs" />
             </div>
             <div className="flex flex-col gap-1.5">
               <label className="text-[11px] font-semibold text-theme-muted tracking-wider uppercase">Email</label>
               <input
                 type="email"
+                name="email"
                 placeholder="your@email.com"
                 required
                 className={inputClass}
                 style={{ borderColor: 'var(--border)' }}
               />
+              <ValidationError prefix="Email" field="email" errors={state.errors} className="text-red-400 text-xs" />
             </div>
           </div>
 
@@ -92,6 +97,7 @@ export default function Contact() {
             <label className="text-[11px] font-semibold text-theme-muted tracking-wider uppercase">Subject</label>
             <input
               type="text"
+              name="subject"
               placeholder="What's this about?"
               required
               className={inputClass}
@@ -102,21 +108,24 @@ export default function Contact() {
           <div className="flex flex-col gap-1.5">
             <label className="text-[11px] font-semibold text-theme-muted tracking-wider uppercase">Message</label>
             <textarea
+              name="message"
               rows={5}
               placeholder="Tell me about your project..."
               required
               className={inputClass}
               style={{ borderColor: 'var(--border)', resize: 'none' }}
             />
+            <ValidationError prefix="Message" field="message" errors={state.errors} className="text-red-400 text-xs" />
           </div>
 
           <motion.button
             type="submit"
+            disabled={state.submitting}
             whileHover={{ y: -2, boxShadow: '0 8px 25px rgba(245,158,11,0.3)' }}
             whileTap={{ scale: 0.97 }}
-            className="self-start inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-accent text-[var(--bg-primary)] font-semibold text-sm transition-all duration-200"
+            className="self-start inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-accent text-[var(--bg-primary)] font-semibold text-sm transition-all duration-200 disabled:opacity-50"
           >
-            {sent ? 'Message Sent! 🎉' : (
+            {state.succeeded ? 'Message Sent! 🎉' : state.submitting ? 'Sending...' : (
               <>
                 <Send size={15} />
                 Send Message
